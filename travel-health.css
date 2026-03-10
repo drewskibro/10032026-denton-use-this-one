@@ -1,0 +1,1486 @@
+/* ============================================
+   TRAVEL HEALTH PAGE STYLES
+   All classes use travel- prefix except shared components
+   ============================================ */
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.travel-hero-section {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  padding: 40px 0 80px;
+  overflow: hidden;
+  background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&h=900&fit=crop');
+  background-size: cover;
+  background-position: center;
+}
+
+.travel-hero-bg {
+  /* Background image handled in section */
+}
+
+.travel-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(109, 104, 181, 0.9), rgba(163, 158, 227, 0.8), rgba(163, 158, 227, 0.4));
+  z-index: 1;
+}
+
+.travel-hero-dots {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 30px 30px;
+  z-index: 2;
+}
+
+.travel-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+@media (min-width: 1024px) {
+  .travel-hero-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Left Content */
+.travel-hero-content {
+  text-align: center;
+  color: var(--white);
+}
+
+@media (min-width: 1024px) {
+  .travel-hero-content {
+    text-align: left;
+  }
+}
+
+.travel-hero-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--white);
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.travel-hero-title .gradient-text {
+  background: linear-gradient(135deg, #ffffff 0%, #e0e7ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@media (min-width: 768px) {
+  .travel-hero-title {
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .travel-hero-title {
+    font-size: 4rem;
+  }
+}
+
+.travel-hero-description {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+}
+
+@media (max-width: 1023px) {
+  .travel-hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .travel-hero-description {
+    font-size: 1.25rem;
+  }
+}
+
+.travel-hero-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 640px) {
+  .travel-hero-actions {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 1023px) {
+  .travel-hero-actions {
+    justify-content: center;
+  }
+}
+
+/* Trust Badges */
+.travel-hero-trust {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  .travel-hero-trust {
+    justify-content: flex-start;
+    flex-wrap: nowrap; /* Force single line on desktop */
+  }
+}
+
+.travel-hero-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 0.625rem 1.25rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: background 0.3s ease;
+  white-space: nowrap;
+}
+
+.travel-hero-trust-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.travel-hero-trust-item i {
+  color: var(--white);
+  font-size: 1rem;
+}
+
+.travel-hero-trust-item span {
+  color: var(--white);
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.02em;
+}
+
+
+/* ============================================
+   STATS BAR
+   ============================================ */
+.travel-stats-section {
+  position: relative;
+  background: var(--brand-primary);
+  padding: 1.5rem 0;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.travel-stats-shimmer {
+  display: none;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.travel-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  position: relative;
+  z-index: 10;
+}
+
+@media (min-width: 768px) {
+  .travel-stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+  }
+}
+
+.travel-stat-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center; /* Centered on mobile */
+}
+
+@media (min-width: 768px) {
+  .travel-stat-item {
+    justify-content: flex-start; /* Left aligned on desktop */
+  }
+}
+
+.travel-stat-image-wrapper {
+  width: 5.5rem;
+  height: 5.5rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.travel-stat-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.travel-stat-icon-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.travel-stat-icon-fallback i {
+  font-size: 1.5rem;
+  color: var(--white);
+}
+
+.travel-stat-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.travel-stat-number {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.travel-stat-label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+
+/* ============================================
+   SERVICES SECTION (PREMIUM UPGRADE)
+   ============================================ */
+.travel-services-section {
+  padding: 6rem 0;
+  background: var(--brand-light);
+}
+
+.travel-services-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.travel-services-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #111827;
+  margin-bottom: 1.5rem;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 768px) {
+  .travel-services-title {
+    font-size: 3rem;
+  }
+}
+
+.travel-services-description {
+  font-size: 1.125rem;
+  color: var(--text-gray);
+  line-height: 1.7;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .travel-services-description {
+    font-size: 1.25rem;
+  }
+}
+
+.travel-services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .travel-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .travel-services-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* Premium Image Card Styles */
+.travel-service-card-premium {
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  background: var(--white);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(163, 158, 227, 0.15);
+}
+
+.travel-service-card-premium:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(163, 158, 227, 0.2);
+  border-color: var(--brand-purple);
+}
+
+.travel-service-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+
+.travel-service-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.travel-service-card-premium:hover .travel-service-image {
+  transform: scale(1.1);
+}
+
+.travel-service-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.05), transparent);
+}
+
+.travel-service-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  position: relative;
+}
+
+.travel-service-icon-small {
+  width: 3rem;
+  height: 3rem;
+  background: linear-gradient(135deg, var(--brand-purple), var(--brand-dark));
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -3rem; /* Pull icon up to overlap image */
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 3px solid var(--white);
+  position: relative;
+  z-index: 10;
+}
+
+.travel-service-icon-small i {
+  font-size: 1.25rem;
+  color: var(--white);
+}
+
+.travel-service-title {
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.travel-service-desc {
+  font-size: 0.875rem;
+  color: var(--text-gray);
+  line-height: 1.6;
+}
+
+
+/* ============================================
+   VACCINATIONS GRID
+   ============================================ */
+.travel-vaccines-section {
+  padding: 6rem 0;
+  background: linear-gradient(to bottom, #ffffff 0%, #f4f3ff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative blobs */
+.travel-vaccines-blob-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(163, 158, 227, 0.08) 0%, transparent 70%);
+  transform: translate(-30%, -30%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.travel-vaccines-blob-2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(109, 104, 181, 0.06) 0%, transparent 70%);
+  transform: translate(30%, 30%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.travel-vaccines-section .section-container {
+  position: relative;
+  z-index: 1;
+}
+
+.travel-vaccines-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.travel-vaccines-header .section-badge {
+  margin-bottom: 1.5rem;
+}
+
+.travel-vaccines-title {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #111827;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 768px) {
+  .travel-vaccines-title {
+    font-size: 2.5rem;
+  }
+}
+
+.travel-vaccines-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .travel-vaccines-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .travel-vaccines-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.travel-vaccine-card {
+  background: var(--white);
+  border: 1px solid rgba(163, 158, 227, 0.2);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px -5px rgba(163, 158, 227, 0.1);
+}
+
+.travel-vaccine-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -5px rgba(163, 158, 227, 0.2);
+  border-color: var(--brand-purple);
+}
+
+.travel-vaccine-icon {
+  width: 3rem;
+  height: 3rem;
+  background: linear-gradient(135deg, rgba(163, 158, 227, 0.15), rgba(109, 104, 181, 0.1));
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.travel-vaccine-icon i {
+  font-size: 1.25rem;
+  color: var(--brand-purple);
+}
+
+.travel-vaccine-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+/* Yellow Fever Special Card */
+.travel-vaccine-card-yellow {
+  background: linear-gradient(135deg, #fcc926, #f59f00);
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.travel-vaccine-card-yellow .travel-vaccine-icon {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.travel-vaccine-card-yellow .travel-vaccine-icon i {
+  color: var(--white);
+}
+
+.travel-vaccine-card-yellow .travel-vaccine-name {
+  color: var(--white);
+  font-size: 1.125rem;
+}
+
+.travel-vaccine-badge {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.625rem;
+  font-weight: 700;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+
+/* ============================================
+   WHY CHOOSE US
+   ============================================ */
+.travel-why-section {
+  padding: 6rem 0;
+  background: var(--brand-light);
+}
+
+.travel-why-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.travel-why-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #111827;
+  margin-bottom: 1rem;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 768px) {
+  .travel-why-title {
+    font-size: 3rem;
+  }
+}
+
+.travel-why-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .travel-why-grid {
+    grid-template-columns: 5fr 7fr;
+  }
+}
+
+/* Image Column */
+.travel-why-image-wrapper {
+  position: relative;
+}
+
+.travel-why-image-bg-circle {
+  position: absolute;
+  inset: -20px;
+  background: rgba(163, 158, 227, 0.1);
+  border-radius: 50%;
+  filter: blur(40px);
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
+.travel-why-image-card {
+  position: relative;
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  border: 4px solid var(--white);
+}
+
+.travel-why-image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.travel-why-image-card:hover img {
+  transform: scale(1.05);
+}
+
+.travel-why-badge {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  background: linear-gradient(135deg, var(--brand-purple), var(--brand-dark));
+  padding: 1.5rem;
+  border-radius: 50%;
+  width: 8rem;
+  height: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(163, 158, 227, 0.4);
+  animation: float 6s ease-in-out infinite;
+  border: 4px solid var(--white);
+}
+
+.travel-why-badge-text {
+  font-size: 1.5rem;
+  font-weight: 900;
+  font-family: var(--font-heading);
+  color: var(--white);
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.travel-why-badge-sub {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+  text-transform: uppercase;
+}
+
+/* Content Column */
+.travel-why-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.travel-why-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  background: var(--white);
+  border: 2px solid rgba(163, 158, 227, 0.15);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 20px rgba(163, 158, 227, 0.08);
+}
+
+.travel-why-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(163, 158, 227, 0.2);
+  border-color: var(--brand-purple);
+}
+
+.travel-why-card-icon {
+  width: 4.5rem;
+  height: 4.5rem;
+  background: #ffffff;
+  border-radius: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 
+    0 10px 30px -5px rgba(163, 158, 227, 0.25),
+    0 4px 10px -2px rgba(163, 158, 227, 0.1);
+  border: 1px solid rgba(163, 158, 227, 0.15);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.travel-why-card-icon::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(163, 158, 227, 0.1), transparent);
+  opacity: 1;
+}
+
+.travel-why-card:hover .travel-why-card-icon {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 15px 40px -5px rgba(163, 158, 227, 0.35);
+  border-color: var(--brand-purple);
+}
+
+.travel-why-card-icon i {
+  font-size: 1.875rem;
+  background: linear-gradient(135deg, var(--brand-purple), var(--brand-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 2px 4px rgba(163, 158, 227, 0.2));
+  position: relative;
+  z-index: 10;
+}
+
+.travel-why-card-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.travel-why-card-description {
+  font-size: 1rem;
+  color: var(--text-gray);
+  line-height: 1.6;
+}
+
+
+/* ============================================
+   PROCESS SECTION
+   ============================================ */
+.travel-process-section {
+  padding: 6rem 0;
+  background: var(--white);
+}
+
+.travel-process-header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.travel-process-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #111827;
+  margin-bottom: 1.5rem;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 768px) {
+  .travel-process-title {
+    font-size: 3rem;
+  }
+}
+
+.travel-process-step {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+@media (min-width: 1024px) {
+  .travel-process-step {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.travel-process-step:last-child {
+  margin-bottom: 0;
+}
+
+.travel-process-step-content {
+  position: relative;
+}
+
+.travel-process-step-number {
+  position: absolute;
+  top: -1.5rem;
+  left: 0;
+  width: 3.5rem;
+  height: 3.5rem;
+  background: linear-gradient(135deg, var(--brand-purple), var(--brand-dark));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--white);
+  box-shadow: 0 8px 20px rgba(163, 158, 227, 0.3);
+}
+
+.travel-process-step-icon {
+  width: 5rem;
+  height: 5rem;
+  background: linear-gradient(135deg, rgba(163, 158, 227, 0.15), rgba(109, 104, 181, 0.1));
+  border-radius: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.travel-process-step-icon i {
+  font-size: 2rem;
+  color: var(--brand-purple);
+}
+
+.travel-process-step-title {
+  font-size: 1.875rem;
+  font-weight: 800;
+  font-family: var(--font-heading);
+  color: #111827;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  .travel-process-step-title {
+    font-size: 2.25rem;
+  }
+}
+
+.travel-process-step-description {
+  font-size: 1.0625rem;
+  color: var(--text-gray);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .travel-process-step-description {
+    font-size: 1.125rem;
+  }
+}
+
+.travel-process-step-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--brand-light);
+  padding: 0.875rem 1.25rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(163, 158, 227, 0.2);
+  width: fit-content;
+}
+
+.travel-process-step-meta i {
+  color: var(--brand-purple);
+  font-size: 1rem;
+}
+
+.travel-process-step-meta span {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.travel-process-step-image {
+  position: relative;
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  border: 4px solid var(--white);
+}
+
+.travel-process-step-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.travel-process-step:hover .travel-process-step-image img {
+  transform: scale(1.05);
+}
+
+.travel-process-step-floating-badge {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: linear-gradient(135deg, var(--brand-purple), var(--brand-dark));
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(163, 158, 227, 0.4);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  animation: float 6s ease-in-out infinite;
+}
+
+.travel-process-step-floating-badge i {
+  font-size: 1.25rem;
+  color: var(--white);
+}
+
+.travel-process-step-floating-badge span {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+/* Alternating layout */
+@media (min-width: 1024px) {
+  .travel-process-step-right .travel-process-step-content {
+    order: 2;
+  }
+
+  .travel-process-step-right .travel-process-step-image {
+    order: 1;
+  }
+}
+
+
+/* ============================================
+   POPULAR DESTINATIONS
+   ============================================ */
+.travel-destinations-section {
+  padding: 6rem 0;
+  background: var(--brand-light);
+}
+
+.travel-destinations-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.travel-destinations-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #111827;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 768px) {
+  .travel-destinations-title {
+    font-size: 3rem;
+  }
+}
+
+.travel-destinations-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .travel-destinations-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .travel-destinations-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.travel-destination-card {
+  display: block;
+  position: relative;
+  aspect-ratio: 4 / 5;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid #f3f4f6;
+  transition: box-shadow 0.5s ease, transform 0.3s ease;
+}
+
+.travel-destination-card:hover {
+  box-shadow: var(--shadow-2xl);
+  transform: translateY(-0.5rem);
+}
+
+.travel-destination-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+
+.travel-destination-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.travel-destination-card:hover .travel-destination-image {
+  transform: scale(1.1);
+}
+
+.travel-destination-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(109, 104, 181, 0.2) 50%, transparent);
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.travel-destination-card:hover .travel-destination-overlay {
+  opacity: 1;
+}
+
+.travel-destination-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem;
+  z-index: 10;
+}
+
+.travel-destination-name {
+  font-family: var(--font-primary);
+  color: var(--white);
+  font-size: 1.375rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  transition: transform 0.3s ease;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.travel-destination-card:hover .travel-destination-name {
+  transform: translateY(-0.25rem);
+}
+
+
+/* ============================================
+   FAQ SECTION (PREMIUM EDITORIAL STYLE)
+   ============================================ */
+.travel-faq-section {
+  padding: 7rem 0;
+  background: linear-gradient(to bottom, #ffffff 0%, #f8f7ff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle background texture */
+.travel-faq-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(rgba(163, 158, 227, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+.travel-faq-header {
+  text-align: center;
+  margin-bottom: 5rem;
+  position: relative;
+  z-index: 10;
+}
+
+.travel-faq-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #111827;
+  margin-bottom: 1rem;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 768px) {
+  .travel-faq-title {
+    font-size: 3.5rem;
+  }
+}
+
+.travel-faq-list {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+  z-index: 10;
+}
+
+.travel-faq-item {
+  background: var(--white);
+  border: 1px solid rgba(163, 158, 227, 0.1);
+  border-radius: 1.5rem;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.travel-faq-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(163, 158, 227, 0.15);
+  border-color: rgba(163, 158, 227, 0.3);
+}
+
+.travel-faq-item.travel-faq-active {
+  box-shadow: 0 25px 50px rgba(163, 158, 227, 0.15);
+  border-color: var(--brand-purple);
+}
+
+.travel-faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 2.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.3s ease;
+}
+
+.travel-faq-number {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--brand-purple), var(--brand-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+  width: 2rem; /* Fixed width for alignment */
+  flex-shrink: 0;
+}
+
+.travel-faq-item:hover .travel-faq-number,
+.travel-faq-item.travel-faq-active .travel-faq-number {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.travel-faq-question-text {
+  flex: 1;
+  font-family: var(--font-heading); /* Premium Serif Font */
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: #1f2937;
+  line-height: 1.3;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: color 0.3s ease;
+}
+
+.travel-faq-item:hover .travel-faq-question-text,
+.travel-faq-item.travel-faq-active .travel-faq-question-text {
+  color: var(--brand-purple);
+}
+
+@media (min-width: 768px) {
+  .travel-faq-question-text {
+    font-size: 1.5rem;
+  }
+}
+
+.travel-faq-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: rgba(163, 158, 227, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--brand-purple);
+  font-size: 1rem;
+  transition: all 0.4s ease;
+  flex-shrink: 0;
+}
+
+.travel-faq-item:hover .travel-faq-icon {
+  background: var(--brand-purple);
+  color: var(--white);
+}
+
+.travel-faq-item.travel-faq-active .travel-faq-icon {
+  background: var(--brand-purple);
+  color: var(--white);
+  transform: rotate(45deg);
+}
+
+.travel-faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), padding 0.5s ease;
+}
+
+.travel-faq-item.travel-faq-active .travel-faq-answer {
+  max-height: 500px;
+  padding: 0 2.5rem 2.5rem 5.5rem; /* Indented to align with text */
+}
+
+.travel-faq-answer p {
+  font-size: 1.125rem;
+  color: #4b5563; /* Darker grey for better readability */
+  line-height: 1.8;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (max-width: 639px) {
+  .travel-faq-question {
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+  
+  .travel-faq-number {
+    font-size: 1.25rem;
+    width: 1.5rem;
+  }
+  
+  .travel-faq-question-text {
+    font-size: 1.125rem;
+  }
+  
+  .travel-faq-item.travel-faq-active .travel-faq-answer {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+  }
+}
+
+
+/* ============================================
+   FINAL CTA SECTION
+   ============================================ */
+    .travel-cta-section {
+      position: relative;
+      background: var(--brand-primary);
+      padding: 6rem 0;
+      overflow: hidden;
+    }
+
+.travel-cta-glow-1 {
+  position: absolute;
+  top: -10%;
+  right: -5%;
+  width: 600px;
+  height: 600px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  filter: blur(100px);
+}
+
+.travel-cta-glow-2 {
+  position: absolute;
+  bottom: -10%;
+  left: -5%;
+  width: 500px;
+  height: 500px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  filter: blur(80px);
+}
+
+.travel-cta-circle {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  width: 300px;
+  height: 300px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.travel-cta-square {
+  position: absolute;
+  bottom: 15%;
+  right: 10%;
+  width: 200px;
+  height: 200px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  transform: rotate(15deg);
+  animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+  from { transform: rotate(15deg); }
+  to { transform: rotate(375deg); }
+}
+
+.travel-cta-dots {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+.travel-cta-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+}
+
+.travel-cta-badges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.travel-cta-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 0.875rem 1.5rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.travel-cta-badge i {
+  font-size: 1.125rem;
+  color: var(--white);
+}
+
+.travel-cta-badge span {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.travel-cta-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  font-family: var(--font-heading);
+  color: var(--white);
+  margin-bottom: 1.5rem;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 768px) {
+  .travel-cta-title {
+    font-size: 3.5rem;
+  }
+}
+
+.travel-cta-description {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.7;
+  max-width: 800px;
+  margin: 0 auto 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .travel-cta-description {
+    font-size: 1.25rem;
+  }
+}
+
+.travel-cta-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 640px) {
+  .travel-cta-actions {
+    flex-direction: row;
+  }
+}
+
+.travel-cta-button-white {
+  background: var(--white);
+  color: var(--brand-dark);
+}
+
+.travel-cta-button-white:hover {
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.travel-cta-button-outlined {
+  background: transparent;
+  color: var(--white);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.travel-cta-button-outlined:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.travel-cta-checks {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.travel-cta-check {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.travel-cta-check i {
+  font-size: 1.125rem;
+  color: var(--white);
+}
+
+.travel-cta-check span {
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+}

@@ -1,0 +1,1397 @@
+/* ============================================
+   YELLOW FEVER PAGE STYLES
+   Uses yellowfever- prefix
+   ============================================ */
+
+/* ============================================
+   BREADCRUMB
+   ============================================ */
+.yellowfever-breadcrumb {
+  padding: 1rem 0;
+  background: var(--white);
+  border-bottom: 1px solid rgba(163, 158, 227, 0.1);
+  margin-top: 80px; /* Offset fixed nav */
+}
+
+.yellowfever-breadcrumb .section-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--text-gray);
+}
+
+.yellowfever-breadcrumb a {
+  color: var(--text-gray);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.yellowfever-breadcrumb a:hover {
+  color: var(--brand-purple);
+}
+
+.yellowfever-breadcrumb .separator {
+  color: #cbd5e1;
+}
+
+.yellowfever-breadcrumb .current {
+  color: var(--brand-purple);
+  font-weight: 600;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.yellowfever-hero-section {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  padding: 80px 0;
+  overflow: hidden;
+  background-image: url('https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?w=1600&h=900&fit=crop');
+  background-size: cover;
+  background-position: center;
+}
+
+.yellowfever-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(252, 201, 38, 0.95), rgba(245, 197, 24, 0.85), rgba(245, 197, 24, 0.4));
+  z-index: 1;
+}
+
+.yellowfever-hero-dots {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+  background-size: 30px 30px;
+  z-index: 2;
+}
+
+.yellowfever-hero-content {
+  position: relative;
+  z-index: 10;
+  max-width: 700px;
+  color: var(--white);
+}
+
+.yellowfever-hero-line {
+  width: 60px;
+  height: 4px;
+  background: var(--white);
+  margin-bottom: 1.5rem;
+  border-radius: 9999px;
+}
+
+.yellowfever-hero-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.yellowfever-hero-title {
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: var(--white);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+  .yellowfever-hero-title {
+    font-size: 4rem;
+  }
+}
+
+.yellowfever-hero-description {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 500;
+}
+
+.yellowfever-hero-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 640px) {
+  .yellowfever-hero-actions {
+    flex-direction: row;
+  }
+}
+
+.yellowfever-btn-primary {
+  background: var(--white);
+  color: #d97706; /* Darker yellow/orange for text */
+  border: none;
+}
+
+.yellowfever-btn-primary:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.yellowfever-btn-secondary {
+  background: transparent;
+  color: var(--white);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.yellowfever-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--white);
+}
+
+.yellowfever-hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.yellowfever-hero-badge {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* ============================================
+   CERTIFICATION SECTION
+   ============================================ */
+.yellowfever-cert-section {
+  padding: 6rem 0;
+  background: var(--white);
+}
+
+.yellowfever-cert-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.yellowfever-cert-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.yellowfever-cert-desc {
+  font-size: 1.125rem;
+  color: var(--text-gray);
+}
+
+.yellowfever-cert-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .yellowfever-cert-grid {
+    grid-template-columns: 5fr 7fr;
+  }
+}
+
+.yellowfever-cert-image-wrapper {
+  position: relative;
+}
+
+.yellowfever-cert-image-card {
+  position: relative;
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  border: 4px solid var(--white);
+}
+
+.yellowfever-cert-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.yellowfever-cert-name-tag {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.yellowfever-cert-name-tag .name {
+  display: block;
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: #111827;
+  font-family: var(--font-heading);
+}
+
+.yellowfever-cert-name-tag .role {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--text-gray);
+  font-weight: 600;
+}
+
+.yellowfever-cert-badge-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(252, 201, 38, 0.15);
+  color: #b45309;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(252, 201, 38, 0.3);
+}
+
+.yellowfever-cert-badge-box i {
+  font-size: 1rem;
+}
+
+.yellowfever-cert-subtitle {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.yellowfever-cert-text {
+  font-size: 1.125rem;
+  color: var(--text-gray);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.yellowfever-cert-features {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .yellowfever-cert-features {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.yellowfever-cert-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.yellowfever-cert-feature .icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: linear-gradient(135deg, #fcc926, #f59f00);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(252, 201, 38, 0.3);
+}
+
+.yellowfever-cert-feature .text strong {
+  display: block;
+  font-size: 1rem;
+  color: #111827;
+  margin-bottom: 0.25rem;
+}
+
+.yellowfever-cert-feature .text p {
+  font-size: 0.9375rem;
+  color: var(--text-gray);
+  line-height: 1.5;
+}
+
+.yellowfever-cert-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 640px) {
+  .yellowfever-cert-actions {
+    flex-direction: row;
+  }
+}
+
+.yellowfever-cert-callout {
+  background: #fffbeb;
+  border: 1px solid #fcd34d;
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.yellowfever-cert-callout .header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.yellowfever-cert-callout .badge {
+  background: #f59f00;
+  color: var(--white);
+  font-size: 0.625rem;
+  font-weight: 800;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  letter-spacing: 0.05em;
+}
+
+.yellowfever-cert-callout h4 {
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: #92400e;
+}
+
+.yellowfever-cert-callout p {
+  font-size: 0.9375rem;
+  color: #92400e;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.yellowfever-cert-callout .note {
+  font-size: 0.75rem;
+  font-style: italic;
+  opacity: 0.8;
+  margin-bottom: 0;
+}
+
+/* ============================================
+   STATS BAR
+   ============================================ */
+.yellowfever-stats-section {
+  background: linear-gradient(to right, #fcc926, #f59f00);
+  padding: 3rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.yellowfever-stats-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .yellowfever-stats-bar {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.yellowfever-stat-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.yellowfever-stat-item .icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 1.5rem;
+}
+
+.yellowfever-stat-item .content {
+  display: flex;
+  flex-direction: column;
+}
+
+.yellowfever-stat-item .number {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1;
+}
+
+.yellowfever-stat-item .label {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.yellowfever-stat-divider {
+  display: none;
+  width: 1px;
+  height: 3rem;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+@media (min-width: 768px) {
+  .yellowfever-stat-divider {
+    display: block;
+  }
+}
+
+/* ============================================
+   ABOUT SECTION
+   ============================================ */
+.yellowfever-about-section {
+  padding: 6rem 0;
+  background: var(--brand-light);
+}
+
+.yellowfever-about-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.yellowfever-about-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.yellowfever-about-desc {
+  font-size: 1.125rem;
+  color: var(--text-gray);
+}
+
+/* Enhanced Grid Layout */
+.yellowfever-about-content-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: start;
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .yellowfever-about-content-grid {
+    grid-template-columns: 40% 1fr;
+    gap: 4rem;
+  }
+}
+
+.yellowfever-about-image-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.yellowfever-about-image-card {
+  position: relative;
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(163, 158, 227, 0.15);
+  aspect-ratio: 3/4;
+}
+
+.yellowfever-about-image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.yellowfever-about-image-card:hover img {
+  transform: scale(1.05);
+}
+
+.yellowfever-about-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .yellowfever-about-cards-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.yellowfever-info-card {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(163, 158, 227, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.yellowfever-info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.yellowfever-info-card .icon {
+  width: 3rem;
+  height: 3rem;
+  background: linear-gradient(135deg, #fcc926, #f59f00);
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 10px rgba(252, 201, 38, 0.3);
+}
+
+.yellowfever-info-card h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 0.75rem;
+}
+
+.yellowfever-info-card p {
+  font-size: 1rem;
+  color: var(--text-gray);
+  line-height: 1.6;
+}
+
+.yellowfever-about-callout {
+  background: #fff1f2;
+  border: 2px solid #fecaca;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.yellowfever-about-callout .badge {
+  display: inline-block;
+  background: #e11d48;
+  color: var(--white);
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 0.375rem 0.75rem;
+  border-radius: 9999px;
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.yellowfever-about-callout h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #9f1239;
+  margin-bottom: 1rem;
+}
+
+.yellowfever-about-callout p {
+  font-size: 1.125rem;
+  color: #881337;
+  line-height: 1.6;
+}
+
+/* ============================================
+   WHO NEEDS VACCINATION
+   ============================================ */
+.yellowfever-needs-section {
+  padding: 6rem 0;
+  background: var(--white);
+}
+
+.yellowfever-needs-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.yellowfever-needs-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.yellowfever-needs-desc {
+  font-size: 1.125rem;
+  color: var(--text-gray);
+}
+
+.yellowfever-needs-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .yellowfever-needs-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.yellowfever-needs-card {
+  padding: 2.5rem;
+  border-radius: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.yellowfever-needs-card.required {
+  background: #fff1f2;
+  border: 2px solid #fecaca;
+}
+
+.yellowfever-needs-card.recommended {
+  background: #fffbeb;
+  border: 2px solid #fcd34d;
+}
+
+.yellowfever-needs-card .card-badge {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 0.375rem 0.75rem;
+  border-radius: 9999px;
+}
+
+.yellowfever-needs-card.required .card-badge {
+  background: #e11d48;
+  color: var(--white);
+}
+
+.yellowfever-needs-card.recommended .card-badge {
+  background: #f59f00;
+  color: var(--white);
+}
+
+.yellowfever-needs-card h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.yellowfever-needs-card.required h3 { color: #9f1239; }
+.yellowfever-needs-card.recommended h3 { color: #92400e; }
+
+.yellowfever-needs-card p {
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.yellowfever-needs-card.required p { color: #881337; }
+.yellowfever-needs-card.recommended p { color: #78350f; }
+
+.yellowfever-needs-card .check-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.yellowfever-needs-card .check-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-weight: 600;
+}
+
+.yellowfever-needs-card.required .check-list li { color: #9f1239; }
+.yellowfever-needs-card.recommended .check-list li { color: #92400e; }
+
+.yellowfever-needs-card .check-list i {
+  margin-top: 0.25rem;
+}
+
+.yellowfever-needs-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: rgba(252, 201, 38, 0.1);
+  padding: 1rem;
+  border-radius: 0.75rem;
+  color: #b45309;
+  font-weight: 600;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ============================================
+   RISK COUNTRIES
+   ============================================ */
+.yellowfever-risk-section {
+  padding: 6rem 0;
+  background: var(--brand-light);
+}
+
+.yellowfever-risk-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.yellowfever-risk-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.yellowfever-risk-desc {
+  font-size: 1.125rem;
+  color: var(--text-gray);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.yellowfever-risk-stats {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
+}
+
+.yellowfever-risk-stats .stat-box {
+  background: var(--white);
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  min-width: 200px;
+}
+
+.yellowfever-risk-stats .num {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--brand-purple);
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.yellowfever-risk-stats .label {
+  display: block;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.25rem;
+}
+
+.yellowfever-risk-stats .sub {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--text-slate);
+}
+
+.yellowfever-risk-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .yellowfever-risk-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Destination Images */
+.yellowfever-destination-image {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  border-radius: 2rem;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  box-shadow: 0 15px 40px rgba(163, 158, 227, 0.12);
+}
+
+.yellowfever-destination-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.yellowfever-destination-image:hover img {
+  transform: scale(1.05);
+}
+
+.yellowfever-risk-card {
+  background: var(--white);
+  border-radius: 2rem;
+  padding: 2.5rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(163, 158, 227, 0.15);
+}
+
+.yellowfever-risk-card.africa {
+  border-top: 6px solid #f59f00;
+}
+
+.yellowfever-risk-card.america {
+  border-top: 6px solid var(--brand-purple);
+}
+
+.yellowfever-risk-card .card-icon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.yellowfever-risk-card.africa .card-icon {
+  background: rgba(252, 201, 38, 0.15);
+  color: #d97706;
+}
+
+.yellowfever-risk-card.america .card-icon {
+  background: rgba(163, 158, 227, 0.15);
+  color: var(--brand-purple);
+}
+
+.yellowfever-risk-card h3 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.yellowfever-risk-card .desc {
+  font-size: 1.0625rem;
+  color: var(--text-gray);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.yellowfever-risk-card .country-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.yellowfever-risk-card .country-list span {
+  background: #f3f4f6;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.yellowfever-risk-card .note {
+  font-size: 0.875rem;
+  color: var(--text-slate);
+  font-style: italic;
+}
+
+.yellowfever-risk-callout {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 1.5rem;
+  padding: 3rem 2rem;
+  margin-bottom: 3rem;
+  border: 1px solid rgba(252, 201, 38, 0.3);
+  box-shadow: 0 20px 60px -10px rgba(252, 201, 38, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.yellowfever-risk-callout::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, #fcc926, #f59f00);
+}
+
+.yellowfever-risk-callout .content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.yellowfever-risk-callout h3 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.yellowfever-risk-callout p {
+  font-size: 1.125rem;
+  color: var(--text-gray);
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+.yellowfever-risk-callout .badges {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.yellowfever-risk-callout .badges span {
+  background: rgba(252, 201, 38, 0.15);
+  color: #b45309;
+  font-weight: 700;
+  padding: 0.625rem 1.25rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  border: 1px solid rgba(252, 201, 38, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.yellowfever-risk-callout .badges span::before {
+  content: '\f00c';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  font-size: 0.75rem;
+}
+
+.yellowfever-risk-footer {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.yellowfever-risk-footer .info-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: linear-gradient(135deg, rgba(163, 158, 227, 0.1), rgba(109, 104, 181, 0.05));
+  color: var(--brand-dark);
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+  border: 1px solid rgba(163, 158, 227, 0.2);
+}
+
+.yellowfever-risk-footer .info-badge i {
+  color: var(--brand-purple);
+}
+
+.yellowfever-risk-footer .actions {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.yellowfever-risk-footer .yellow-btn {
+  background: linear-gradient(135deg, #fcc926, #f59f00);
+  color: var(--white);
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  box-shadow: 0 10px 30px -5px rgba(245, 159, 0, 0.4);
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.yellowfever-risk-footer .yellow-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -5px rgba(245, 159, 0, 0.5);
+}
+
+.yellowfever-risk-footer .outline-btn {
+  background: var(--white);
+  color: var(--brand-dark);
+  border: 1px solid rgba(163, 158, 227, 0.2);
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.yellowfever-risk-footer .outline-btn:hover {
+  border-color: var(--brand-purple);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(163, 158, 227, 0.15);
+}
+
+/* ============================================
+   DETAILS SECTION
+   ============================================ */
+.yellowfever-details-section {
+  padding: 6rem 0;
+  background: var(--white);
+}
+
+.yellowfever-details-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.yellowfever-details-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.yellowfever-details-desc {
+  font-size: 1.125rem;
+  color: var(--text-gray);
+}
+
+/* Details Hero Image */
+.yellowfever-details-hero-image {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  height: 400px;
+  margin: 0 auto 4rem;
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(163, 158, 227, 0.15);
+}
+
+.yellowfever-details-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.yellowfever-details-hero-image:hover img {
+  transform: scale(1.02);
+}
+
+.yellowfever-details-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .yellowfever-details-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .yellowfever-details-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.yellowfever-detail-card {
+  background: #f9fafb;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+}
+
+.yellowfever-detail-card:hover {
+  background: var(--white);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border-color: rgba(163, 158, 227, 0.3);
+  transform: translateY(-4px);
+}
+
+.yellowfever-detail-card .icon {
+  width: 3rem;
+  height: 3rem;
+  background: linear-gradient(135deg, var(--brand-purple), var(--brand-dark));
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.yellowfever-detail-card h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 0.75rem;
+}
+
+.yellowfever-detail-card p {
+  font-size: 1rem;
+  color: var(--text-gray);
+  line-height: 1.6;
+}
+
+/* ============================================
+   FAQ SECTION
+   ============================================ */
+.yellowfever-faq-section {
+  padding: 6rem 0;
+  background: var(--brand-light);
+}
+
+.yellowfever-faq-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.yellowfever-faq-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.yellowfever-faq-desc {
+  font-size: 1.125rem;
+  color: var(--text-gray);
+}
+
+.yellowfever-faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.yellowfever-faq-item {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 1.5rem;
+  overflow: hidden;
+  border: 2px solid #e5e7eb;
+  transition: all 0.4s ease;
+}
+
+.yellowfever-faq-item:hover {
+  border-color: rgba(163, 158, 227, 0.4);
+  box-shadow: 0 20px 50px rgba(163, 158, 227, 0.15);
+  transform: translateY(-2px);
+}
+
+.yellowfever-faq-item.travel-faq-active {
+  box-shadow: 0 8px 20px rgba(163, 158, 227, 0.1);
+  border-color: var(--brand-purple);
+  background: var(--white);
+}
+
+.yellowfever-faq-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.yellowfever-faq-btn .num {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 900;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--brand-purple), var(--brand-dark));
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(163, 158, 227, 0.3);
+}
+
+.yellowfever-faq-btn .text {
+  flex: 1;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.yellowfever-faq-btn .icon {
+  color: var(--brand-purple);
+  transition: transform 0.3s ease;
+  font-size: 1.25rem;
+}
+
+.yellowfever-faq-item.travel-faq-active .icon {
+  transform: rotate(45deg);
+}
+
+.yellowfever-faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.yellowfever-faq-item.travel-faq-active .yellowfever-faq-content {
+  max-height: 300px;
+  padding: 0 2rem 2rem 5.5rem; /* Indented to align with text */
+}
+
+.yellowfever-faq-content p {
+  font-size: 1.0625rem;
+  color: var(--text-gray);
+  line-height: 1.7;
+}
+
+@media (max-width: 640px) {
+  .yellowfever-faq-btn {
+    padding: 1.25rem;
+    gap: 1rem;
+  }
+  
+  .yellowfever-faq-item.travel-faq-active .yellowfever-faq-content {
+    padding: 0 1.25rem 1.5rem 1.25rem;
+  }
+}
+
+/* ============================================
+   CTA SECTION
+   ============================================ */
+.yellowfever-cta-section {
+  position: relative;
+  background: linear-gradient(to right, #a39ee3, #8b85d6, #6d68b5);
+  padding: 6rem 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+.yellowfever-cta-bg {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+.yellowfever-cta-content {
+  position: relative;
+  z-index: 10;
+}
+
+.yellowfever-cta-badges {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.yellowfever-cta-badges .badge {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  color: var(--white);
+  font-weight: 700;
+  font-size: 0.875rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.yellowfever-cta-title {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--white);
+  margin-bottom: 1.5rem;
+}
+
+.yellowfever-cta-desc {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.95);
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+}
+
+.yellowfever-cta-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.yellowfever-cta-actions .white-btn {
+  background: #ffffff;
+  color: #6d68b5;
+}
+
+.yellowfever-cta-actions .white-btn:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.yellowfever-cta-actions .outline-btn {
+  background: transparent;
+  color: var(--white);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.yellowfever-cta-actions .outline-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--white);
+}
+
+.yellowfever-cta-checks {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.yellowfever-cta-checks .check {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--white);
+  font-weight: 600;
+}
+
+.yellowfever-cta-checks .check i {
+  color: #ffffff;
+}

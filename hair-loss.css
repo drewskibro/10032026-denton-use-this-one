@@ -1,0 +1,1222 @@
+/* ============================================
+   HAIR LOSS PAGE STYLES
+   Uses hairloss- prefix
+   ============================================ */
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.hairloss-hero-section {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  padding: 140px 0 60px;
+  overflow: hidden;
+  background: linear-gradient(to bottom, var(--brand-light), var(--white), var(--brand-light));
+}
+
+.hairloss-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(163, 158, 227, 0.02) 2px, transparent 2px);
+  background-size: 40px 40px;
+  z-index: 0;
+}
+
+.hairloss-hero-glow-1 {
+  position: absolute;
+  top: -10%;
+  right: -5%;
+  width: 600px;
+  height: 600px;
+  background: rgba(163, 158, 227, 0.06);
+  border-radius: 50%;
+  filter: blur(100px);
+  z-index: 1;
+  animation: float 8s ease-in-out infinite;
+}
+
+.hairloss-hero-glow-2 {
+  position: absolute;
+  bottom: -10%;
+  left: -5%;
+  width: 500px;
+  height: 500px;
+  background: rgba(139, 133, 214, 0.06);
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: 1;
+  animation: float 10s ease-in-out infinite reverse;
+}
+
+.hairloss-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+@media (min-width: 1024px) {
+  .hairloss-hero-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Left Content */
+.hairloss-hero-content {
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .hairloss-hero-content {
+    text-align: left;
+  }
+}
+
+.hairloss-hero-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #111827;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 768px) {
+  .hairloss-hero-title {
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hairloss-hero-title {
+    font-size: 4rem;
+  }
+}
+
+.hairloss-hero-description {
+  font-size: 1.125rem;
+  color: var(--text-gray);
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+}
+
+@media (max-width: 1023px) {
+  .hairloss-hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.hairloss-hero-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+@media (max-width: 1023px) {
+  .hairloss-hero-features {
+    align-items: center;
+  }
+}
+
+.hairloss-hero-features li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1rem;
+  color: var(--text-gray);
+  font-weight: 500;
+}
+
+.hairloss-hero-features i {
+  color: var(--brand-purple);
+  font-size: 1.25rem;
+}
+
+.hairloss-hero-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 640px) {
+  .hairloss-hero-actions {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 1023px) {
+  .hairloss-hero-actions {
+    justify-content: center;
+  }
+}
+
+/* Right Visual */
+.hairloss-hero-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.hairloss-hero-image-card {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  height: 600px;
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(163, 158, 227, 0.15);
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+}
+
+.hairloss-hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hairloss-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent);
+}
+
+    .hairloss-hero-caption {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: auto;
+      min-width: 260px;
+      padding: 1rem 2rem;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      border-radius: 9999px;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.25rem;
+      transition: transform 0.3s ease;
+    }
+
+    .hairloss-hero-caption:hover {
+      transform: translateX(-50%) translateY(-5px);
+      background: rgba(255, 255, 255, 0.95);
+    }
+
+    .hairloss-hero-caption .star-row {
+      justify-content: center;
+      color: #F4B400;
+      font-size: 1rem;
+      filter: drop-shadow(0 2px 4px rgba(244, 180, 0, 0.2));
+    }
+
+    .hairloss-hero-caption p {
+      font-size: 0.8125rem;
+      font-weight: 700;
+      color: #111827;
+      margin: 0;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+/* ============================================
+   STATS BAR
+   ============================================ */
+.hairloss-stats-section {
+  position: relative;
+  background: var(--brand-primary);
+  padding: 1.5rem 0;
+  overflow: hidden;
+}
+
+.hairloss-stats-shimmer {
+  display: none;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.hairloss-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+@media (min-width: 768px) {
+  .hairloss-stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.hairloss-stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.hairloss-stat-icon {
+  width: 4rem;
+  height: 4rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hairloss-stat-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.hairloss-stat-number {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1;
+}
+
+.hairloss-stat-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* ============================================
+   UNDERSTANDING HAIR LOSS
+   ============================================ */
+.hairloss-about-section {
+  padding: 4rem 0;
+  background: var(--white);
+}
+
+.hairloss-about-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.hairloss-about-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.hairloss-about-desc {
+  font-size: 1.125rem;
+  color: var(--text-gray);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.hairloss-about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .hairloss-about-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.hairloss-about-card {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid #f3f4f6;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+}
+
+@media (min-width: 1024px) {
+  .hairloss-about-card {
+    padding: 2.5rem;
+  }
+}
+
+.hairloss-about-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  border-color: rgba(163, 158, 227, 0.3);
+}
+
+.hairloss-about-icon {
+  width: 4rem;
+  height: 4rem;
+  background: linear-gradient(135deg, var(--brand-purple), var(--brand-dark));
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.hairloss-about-card-title {
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.75rem;
+}
+
+.hairloss-about-card-desc {
+  font-size: 1rem;
+  color: var(--text-gray);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.hairloss-about-image-wrapper {
+  border-radius: 1rem;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.hairloss-about-image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ============================================
+   TREATMENT OPTIONS
+   ============================================ */
+.hairloss-treatments-section {
+  padding: 4rem 0;
+  background: rgba(163, 158, 227, 0.05);
+}
+
+.hairloss-treatments-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.hairloss-treatments-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.hairloss-treatments-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .hairloss-treatments-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.hairloss-treatment-card {
+  position: relative;
+  background: linear-gradient(to bottom, #ffffff, #fafafa);
+  border: 1px solid rgba(163, 158, 227, 0.2);
+  border-radius: 2rem;
+  padding: 2.5rem;
+  box-shadow: 
+    0 20px 40px -5px rgba(163, 158, 227, 0.1),
+    0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+  .hairloss-treatment-card {
+    padding: 3rem;
+  }
+}
+
+.hairloss-treatment-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, var(--brand-purple), var(--brand-accent));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.hairloss-treatment-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 
+    0 30px 60px -10px rgba(163, 158, 227, 0.25),
+    0 0 0 1px rgba(163, 158, 227, 0.3);
+  border-color: rgba(163, 158, 227, 0.4);
+}
+
+.hairloss-treatment-card:hover::before {
+  opacity: 1;
+}
+
+.hairloss-treatment-glow {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 300px;
+  height: 300px;
+  background: rgba(163, 158, 227, 0.05);
+  border-radius: 50%;
+  filter: blur(60px);
+  pointer-events: none;
+  animation: float 8s ease-in-out infinite;
+}
+
+.hairloss-treatment-badge {
+  display: inline-flex;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.hairloss-treatment-badge.prescription {
+  background: #f0fdf4;
+  border: 1px solid #dcfce7;
+  color: #16a34a;
+}
+
+.hairloss-treatment-badge.otc {
+  background: rgba(163, 158, 227, 0.1);
+  border: 1px solid rgba(163, 158, 227, 0.2);
+  color: var(--brand-dark);
+}
+
+    .hairloss-treatment-image-container {
+      width: 6rem;
+      height: 6rem;
+      border-radius: 1.5rem;
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 10px 25px rgba(163, 158, 227, 0.15);
+      border: 4px solid var(--white);
+      transition: all 0.3s ease;
+    }
+
+    .hairloss-treatment-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .hairloss-treatment-card:hover .hairloss-treatment-image-container {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(163, 158, 227, 0.25);
+      border-color: rgba(163, 158, 227, 0.2);
+    }
+
+    .hairloss-treatment-card:hover .hairloss-treatment-img {
+      transform: scale(1.1);
+    }
+
+.hairloss-treatment-title {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.hairloss-treatment-subtitle {
+  font-size: 1rem;
+  color: var(--text-slate);
+  margin-bottom: 1.5rem;
+}
+
+.hairloss-treatment-divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(163, 158, 227, 0.2);
+  margin: 1.5rem 0;
+}
+
+.hairloss-treatment-heading {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.hairloss-treatment-text {
+  font-size: 1rem;
+  color: var(--text-gray);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.hairloss-treatment-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.hairloss-treatment-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  color: var(--text-gray);
+  font-weight: 500;
+}
+
+.hairloss-treatment-list i {
+  color: var(--brand-purple);
+  font-size: 1.25rem;
+}
+
+.hairloss-treatment-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.hairloss-treatment-details .detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.hairloss-treatment-details .label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-slate);
+}
+
+.hairloss-treatment-details .value {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.hairloss-treatment-btn {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+/* ============================================
+   COMBINATION THERAPY
+   ============================================ */
+.hairloss-combo-section {
+  padding: 4rem 0;
+  background: var(--white);
+}
+
+.hairloss-combo-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .hairloss-combo-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.hairloss-combo-image-card {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  height: 600px;
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.15);
+  border: 6px solid var(--white);
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+}
+
+.hairloss-combo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hairloss-combo-content {
+  text-align: left;
+}
+
+.hairloss-combo-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #111827;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.hairloss-combo-desc {
+  font-size: 1.125rem;
+  color: var(--text-gray);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.hairloss-combo-benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hairloss-combo-benefits li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.hairloss-combo-benefits .icon {
+  width: 3rem;
+  height: 3rem;
+  background: linear-gradient(135deg, var(--brand-purple), var(--brand-dark));
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.hairloss-combo-benefits .text strong {
+  display: block;
+  font-size: 1.125rem;
+  color: #111827;
+  margin-bottom: 0.25rem;
+}
+
+.hairloss-combo-benefits .text p {
+  font-size: 1rem;
+  color: var(--text-gray);
+  margin: 0;
+}
+
+.hairloss-combo-comparison {
+  background: rgba(163, 158, 227, 0.05);
+  border: 1px solid rgba(163, 158, 227, 0.15);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.hairloss-combo-comparison p {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.hairloss-combo-comparison p:last-child {
+  margin-bottom: 0;
+}
+
+.hairloss-combo-comparison .single {
+  color: var(--text-gray);
+}
+
+.hairloss-combo-comparison .combined {
+  color: var(--brand-dark);
+  font-weight: 700;
+}
+
+/* ============================================
+   ELIGIBILITY SECTION
+   ============================================ */
+.hairloss-eligibility-section {
+  padding: 4rem 0 5rem;
+  background: linear-gradient(to right, var(--brand-purple), var(--brand-accent), var(--brand-dark));
+}
+
+.hairloss-eligibility-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.hairloss-eligibility-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.hairloss-eligibility-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .hairloss-eligibility-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.hairloss-eligibility-card {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .hairloss-eligibility-card {
+    padding: 2.5rem;
+  }
+}
+
+.hairloss-eligibility-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.hairloss-eligibility-card .icon {
+  width: 5rem;
+  height: 5rem;
+  background: linear-gradient(135deg, var(--brand-purple), var(--brand-dark));
+  border-radius: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 2rem;
+  margin: 0 auto 1.5rem;
+}
+
+.hairloss-eligibility-card .badge {
+  display: inline-flex;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hairloss-eligibility-card .badge.suitable {
+  background: #f0fdf4;
+  border: 1px solid #dcfce7;
+  color: #16a34a;
+}
+
+.hairloss-eligibility-card .badge.assessment {
+  background: rgba(163, 158, 227, 0.1);
+  border: 1px solid rgba(163, 158, 227, 0.2);
+  color: var(--brand-dark);
+}
+
+.hairloss-eligibility-card .badge.not-suitable {
+  background: rgba(163, 158, 227, 0.15);
+  border: 1px solid rgba(163, 158, 227, 0.25);
+  color: var(--brand-dark);
+}
+
+.hairloss-eligibility-card h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 1.5rem;
+}
+
+.hairloss-eligibility-card .check-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  text-align: left;
+}
+
+.hairloss-eligibility-card .check-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1rem;
+  color: var(--text-gray);
+  font-weight: 500;
+}
+
+.hairloss-eligibility-card .check-list i {
+  color: var(--brand-purple);
+  font-size: 1.25rem;
+}
+
+.hairloss-eligibility-note {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-top: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ============================================
+   PROCESS SECTION
+   ============================================ */
+.hairloss-process-section {
+  padding: 4rem 0;
+  background: var(--white);
+}
+
+.hairloss-process-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.hairloss-process-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.hairloss-process-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .hairloss-process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .hairloss-process-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.hairloss-process-card {
+  position: relative;
+  background: var(--white);
+  border: 1px solid #f3f4f6;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+}
+
+.hairloss-process-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  border-color: rgba(163, 158, 227, 0.3);
+}
+
+.hairloss-process-card .number {
+  position: absolute;
+  top: -12px;
+  left: 1.5rem;
+  width: 3rem;
+  height: 3rem;
+  background: linear-gradient(135deg, var(--brand-purple), var(--brand-dark));
+  border-radius: 50%;
+  border: 3px solid var(--white);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.hairloss-process-card .icon {
+  width: 4rem;
+  height: 4rem;
+  background: linear-gradient(135deg, rgba(163, 158, 227, 0.15), rgba(109, 104, 181, 0.1));
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--brand-purple);
+  font-size: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.hairloss-process-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.75rem;
+}
+
+.hairloss-process-card p {
+  font-size: 1rem;
+  color: var(--text-gray);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.hairloss-process-card .time-badge {
+  display: inline-block;
+  background: rgba(163, 158, 227, 0.1);
+  color: var(--brand-dark);
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.5rem;
+}
+
+.hairloss-process-card .arrow {
+  position: absolute;
+  top: 50%;
+  right: -1.5rem;
+  transform: translateY(-50%);
+  color: var(--brand-purple);
+  font-size: 1.5rem;
+  z-index: 1;
+}
+
+.hairloss-process-cta {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+/* ============================================
+   FAQ SECTION
+   ============================================ */
+.hairloss-faq-section {
+  padding: 4rem 0;
+  background: linear-gradient(to bottom, var(--white) 0%, rgba(163, 158, 227, 0.05) 50%, var(--white) 100%);
+}
+
+.hairloss-faq-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.hairloss-faq-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.hairloss-faq-list {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hairloss-faq-item {
+  background: var(--white);
+  border: 1px solid #f3f4f6;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.hairloss-faq-item:hover {
+  border-color: rgba(163, 158, 227, 0.3);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.hairloss-faq-item.active {
+  border-color: var(--brand-purple);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.hairloss-faq-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.hairloss-faq-btn .num {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: linear-gradient(135deg, var(--brand-purple), var(--brand-dark));
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.125rem;
+  flex-shrink: 0;
+}
+
+.hairloss-faq-btn .text {
+  flex: 1;
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.hairloss-faq-btn .icon {
+  width: 2.75rem;
+  height: 2.75rem;
+  background: rgba(163, 158, 227, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--brand-purple);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.hairloss-faq-item.active .icon {
+  transform: rotate(45deg);
+}
+
+.hairloss-faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.hairloss-faq-item.active .hairloss-faq-content {
+  max-height: 300px;
+  padding: 0 2rem 2rem 6rem;
+}
+
+.hairloss-faq-content p {
+  font-size: 1rem;
+  color: var(--text-gray);
+  line-height: 1.7;
+}
+
+@media (max-width: 640px) {
+  .hairloss-faq-btn {
+    padding: 1.25rem;
+    gap: 1rem;
+  }
+  
+  .hairloss-faq-item.active .hairloss-faq-content {
+    padding: 0 1.25rem 1.5rem 1.25rem;
+  }
+}
+
+/* ============================================
+   FINAL CTA SECTION
+   ============================================ */
+.hairloss-cta-section {
+  background: linear-gradient(to right, var(--brand-purple), var(--brand-accent), var(--brand-dark));
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.hairloss-cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hairloss-cta-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--white);
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .hairloss-cta-title {
+    font-size: 3rem;
+  }
+}
+
+.hairloss-cta-desc {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 2.5rem;
+}
+
+.hairloss-cta-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 640px) {
+  .hairloss-cta-actions {
+    flex-direction: row;
+  }
+}
+
+.hairloss-cta-btn {
+  background: var(--white);
+  color: var(--brand-dark);
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.hairloss-cta-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.hairloss-cta-badge {
+  display: inline-flex;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 9999px;
+  backdrop-filter: blur(12px);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--white);
+}

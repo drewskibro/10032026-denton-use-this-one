@@ -1,0 +1,134 @@
+/* ============================================
+   KENYA TRAVEL PAGE STYLES
+   Uses kenya- prefix
+   ============================================ */
+
+/* Hero */
+.kenya-hero-section {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  padding: 140px 0 80px;
+  overflow: hidden;
+  background-image: url('https://images.unsplash.com/photo-1516426122078-c23e76319801?w=1600&h=900&fit=crop');
+  background-size: cover;
+  background-position: center;
+}
+.kenya-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom right, rgba(163, 158, 227, 0.9) 0%, rgba(109, 104, 181, 0.85) 100%); z-index: 1; }
+.kenya-hero-dots { position: absolute; inset: 0; background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px); background-size: 30px 30px; z-index: 2; }
+.kenya-hero-grid { display: grid; grid-template-columns: 1fr; gap: 4rem; align-items: center; position: relative; z-index: 10; }
+@media (min-width: 1024px) { .kenya-hero-grid { grid-template-columns: 1fr 1fr; } }
+.kenya-hero-content { text-align: center; color: var(--white); }
+@media (min-width: 1024px) { .kenya-hero-content { text-align: left; } }
+.kenya-hero-description { font-size: 1.125rem; color: rgba(255, 255, 255, 0.9); line-height: 1.7; margin-bottom: 2.5rem; max-width: 600px; }
+@media (max-width: 1023px) { .kenya-hero-description { margin-left: auto; margin-right: auto; } }
+.kenya-hero-actions { display: flex; flex-direction: column; gap: 1rem; margin-bottom: 3rem; }
+@media (min-width: 640px) { .kenya-hero-actions { flex-direction: row; } }
+@media (max-width: 1023px) { .kenya-hero-actions { justify-content: center; } }
+.kenya-hero-btn-primary { background: var(--white); color: var(--brand-dark); }
+.kenya-hero-btn-primary:hover { background: rgba(255, 255, 255, 0.9); transform: scale(1.05); }
+.kenya-hero-btn-secondary { background: transparent; color: var(--white); border: 2px solid rgba(255, 255, 255, 0.3); }
+.kenya-hero-btn-secondary:hover { background: rgba(255, 255, 255, 0.1); border-color: var(--white); }
+
+/* Stats */
+.kenya-stats-section { position: relative; background: linear-gradient(to right, var(--brand-purple), var(--brand-accent), var(--brand-dark)); padding: 3.5rem 0; overflow: hidden; box-shadow: 0 10px 30px -10px rgba(109, 104, 181, 0.3); }
+.kenya-stats-shimmer { position: absolute; inset: 0; background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent); animation: shimmer 4s infinite; }
+.kenya-stats-grid { display: grid; grid-template-columns: 1fr; gap: 2.5rem; position: relative; z-index: 10; }
+@media (min-width: 768px) { .kenya-stats-grid { grid-template-columns: repeat(3, 1fr); gap: 4rem; } }
+.kenya-stat-item { display: flex; align-items: center; gap: 1.25rem; justify-content: center; transition: transform 0.3s ease; }
+.kenya-stat-item:hover { transform: translateY(-2px); }
+.kenya-stat-icon { width: 4rem; height: 4rem; background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(12px); border-radius: 1.25rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); transition: all 0.3s ease; }
+.kenya-stat-item:hover .kenya-stat-icon { background: rgba(255, 255, 255, 0.25); border-color: rgba(255, 255, 255, 0.5); }
+.kenya-stat-icon i { font-size: 1.5rem; color: var(--white); }
+.kenya-stat-content { display: flex; flex-direction: column; gap: 0.25rem; }
+.kenya-stat-number { font-family: var(--font-heading); font-size: 2.25rem; font-weight: 900; color: var(--white); line-height: 1; }
+.kenya-stat-label { font-size: 0.875rem; font-weight: 700; color: rgba(255, 255, 255, 0.9); text-transform: uppercase; letter-spacing: 0.05em; }
+
+/* Vaccines */
+.kenya-vaccines-section { padding: 6rem 0; background: var(--brand-light); }
+.kenya-vaccines-header { text-align: center; margin-bottom: 4rem; }
+.kenya-vaccines-title { font-size: 2.5rem; font-weight: 900; color: #111827; margin-bottom: 1rem; line-height: 1.15; }
+.kenya-vaccines-divider { width: 60px; height: 3px; background: linear-gradient(to right, var(--brand-purple), var(--brand-dark)); border-radius: 9999px; margin: 0 auto 1.5rem; }
+.kenya-vaccines-description { font-size: 1.125rem; color: var(--text-gray); line-height: 1.7; }
+.kenya-vaccines-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+@media (min-width: 1024px) { .kenya-vaccines-grid { grid-template-columns: repeat(2, 1fr); } }
+.kenya-vaccine-card { display: flex; align-items: flex-start; gap: 1.5rem; background: var(--white); border: 2px solid rgba(163, 158, 227, 0.15); border-radius: 1.5rem; padding: 2rem; transition: all 0.4s ease; box-shadow: 0 4px 20px rgba(163, 158, 227, 0.08); }
+.kenya-vaccine-card:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(163, 158, 227, 0.2); border-color: var(--brand-purple); }
+.kenya-vaccine-icon { width: 4rem; height: 4rem; background: linear-gradient(135deg, var(--brand-purple), var(--brand-dark)); border-radius: 1rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 8px 20px rgba(163, 158, 227, 0.3); transition: transform 0.4s ease; }
+.kenya-vaccine-card:hover .kenya-vaccine-icon { transform: scale(1.1) rotate(5deg); }
+.kenya-vaccine-icon i { font-size: 1.5rem; color: var(--white); }
+.kenya-vaccine-content { flex: 1; }
+.kenya-vaccine-head { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; }
+.kenya-vaccine-name { font-size: 1.25rem; font-weight: 800; color: #111827; line-height: 1.2; }
+.kenya-badge-purple { background: rgba(163, 158, 227, 0.15); color: var(--brand-dark); border: 1px solid rgba(163, 158, 227, 0.3); font-size: 0.75rem; font-weight: 700; padding: 0.375rem 0.75rem; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.05em; }
+.kenya-badge-gray { background: #f3f4f6; color: #6b7280; border: 1px solid #e5e7eb; font-size: 0.75rem; font-weight: 700; padding: 0.375rem 0.75rem; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.05em; }
+.kenya-vaccine-short { font-size: 0.9375rem; font-weight: 700; color: var(--brand-purple); margin-bottom: 0.75rem; }
+.kenya-vaccine-desc { font-size: 1rem; color: var(--text-gray); line-height: 1.6; }
+
+/* Malaria */
+.kenya-malaria-section { padding: 6rem 0; background: var(--white); position: relative; overflow: hidden; }
+.kenya-malaria-layout { display: grid; grid-template-columns: 1fr; gap: 4rem; align-items: center; }
+@media (min-width: 1024px) { .kenya-malaria-layout { grid-template-columns: 1fr 1fr; } }
+.kenya-malaria-visual { position: relative; }
+.kenya-malaria-image-card { position: relative; border-radius: 2rem; overflow: hidden; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15); border: 4px solid var(--white); aspect-ratio: 4/5; }
+.kenya-malaria-image { width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s ease; }
+.kenya-malaria-image-card:hover .kenya-malaria-image { transform: scale(1.05); }
+.kenya-malaria-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent); }
+.kenya-malaria-badge { position: absolute; bottom: 2rem; left: 2rem; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); padding: 0.5rem 1.25rem 0.5rem 0.5rem; border-radius: 9999px; display: flex; align-items: center; gap: 0.75rem; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15); border: 1px solid rgba(255, 255, 255, 0.8); transition: transform 0.3s ease; z-index: 20; }
+.kenya-malaria-badge:hover { transform: translateY(-4px); }
+.kenya-malaria-badge-icon { width: 2.25rem; height: 2.25rem; background: linear-gradient(135deg, var(--brand-purple), var(--brand-dark)); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--white); box-shadow: 0 4px 10px rgba(163, 158, 227, 0.4); flex-shrink: 0; }
+.kenya-malaria-badge-icon i { font-size: 1rem; color: var(--white); }
+.kenya-malaria-badge-text { font-weight: 800; color: var(--brand-dark); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; padding-right: 0.25rem; }
+.kenya-malaria-content { padding-left: 1rem; }
+.kenya-malaria-title { font-size: 2.5rem; font-weight: 900; color: #111827; margin-bottom: 1.5rem; line-height: 1.15; }
+.kenya-malaria-intro { font-size: 1.125rem; color: var(--text-gray); line-height: 1.7; margin-bottom: 2.5rem; }
+.kenya-malaria-info-grid { display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 2.5rem; }
+.kenya-malaria-item { display: flex; align-items: flex-start; gap: 1.5rem; background: var(--white); padding: 2rem; border-radius: 1.5rem; border: 1px solid rgba(163, 158, 227, 0.15); box-shadow: 0 4px 20px rgba(163, 158, 227, 0.05); transition: all 0.3s ease; }
+.kenya-malaria-item:hover { transform: translateY(-4px); box-shadow: 0 15px 40px rgba(163, 158, 227, 0.15); border-color: rgba(163, 158, 227, 0.3); }
+.kenya-malaria-item-icon { width: 3.5rem; height: 3.5rem; border-radius: 1rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05); }
+.kenya-malaria-item-icon.low-risk { background: linear-gradient(135deg, #dcfce7, #bbf7d0); color: #15803d; }
+.kenya-malaria-item-icon.high-risk { background: linear-gradient(135deg, #fee2e2, #fecaca); color: #b91c1c; }
+.kenya-malaria-item-icon i { font-size: 1.5rem; }
+.kenya-malaria-item-text h4 { font-family: var(--font-heading); font-size: 1.375rem; font-weight: 700; color: #111827; margin-bottom: 0.5rem; letter-spacing: -0.01em; }
+.kenya-malaria-item-text p { font-size: 1rem; color: var(--text-gray); line-height: 1.6; }
+
+/* Health Advice */
+.kenya-health-section { padding: 6rem 0; background: var(--brand-light); }
+.kenya-health-header { text-align: center; margin-bottom: 4rem; }
+.kenya-health-title { font-size: 2.5rem; font-weight: 900; color: #111827; margin-bottom: 0.5rem; line-height: 1.15; }
+.kenya-health-subtitle { font-size: 1.125rem; color: var(--text-gray); }
+.kenya-health-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+@media (min-width: 768px) { .kenya-health-grid { grid-template-columns: repeat(3, 1fr); } }
+.kenya-health-card-visual { position: relative; border-radius: 1.5rem; overflow: hidden; height: 400px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); transition: all 0.4s ease; background-color: #1a202c; }
+.kenya-health-card-visual:hover { transform: translateY(-8px); box-shadow: 0 20px 50px rgba(163, 158, 227, 0.25); }
+.kenya-health-bg { position: absolute; inset: 0; z-index: 0; }
+.kenya-health-bg img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s ease; }
+.kenya-health-card-visual:hover .kenya-health-bg img { transform: scale(1.1); }
+.kenya-health-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 60%, transparent 100%); z-index: 1; }
+.kenya-health-content { position: absolute; bottom: 1rem; left: 1rem; right: 1rem; padding: 1.5rem; background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(16px); border-radius: 1.25rem; z-index: 2; color: var(--white); border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); transition: all 0.4s ease; }
+.kenya-health-card-visual:hover .kenya-health-content { background: rgba(255, 255, 255, 0.25); transform: translateY(-5px); box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); border-color: rgba(255, 255, 255, 0.5); }
+.kenya-health-icon-wrapper { position: absolute; top: -1.75rem; right: 1.5rem; width: 3.5rem; height: 3.5rem; background: linear-gradient(135deg, var(--brand-purple), var(--brand-dark)); border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 4px solid rgba(255, 255, 255, 0.2); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); transition: transform 0.4s ease; }
+.kenya-health-card-visual:hover .kenya-health-icon-wrapper { transform: scale(1.1) rotate(10deg); }
+.kenya-health-icon-wrapper i { font-size: 1.25rem; color: var(--white); }
+.kenya-health-card-title { font-family: var(--font-heading); font-size: 1.75rem; font-weight: 700; margin-bottom: 0.5rem; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); letter-spacing: -0.02em; }
+.kenya-health-card-desc { font-size: 0.9375rem; line-height: 1.6; color: rgba(255, 255, 255, 0.95); font-weight: 500; }
+
+/* CTA */
+.kenya-cta-section { position: relative; background: linear-gradient(to right, var(--brand-purple), var(--brand-accent), var(--brand-dark)); padding: 6rem 0; overflow: hidden; }
+.kenya-cta-glow-1 { position: absolute; top: -10%; right: -5%; width: 600px; height: 600px; background: rgba(255, 255, 255, 0.1); border-radius: 50%; filter: blur(100px); }
+.kenya-cta-glow-2 { position: absolute; bottom: -10%; left: -5%; width: 500px; height: 500px; background: rgba(255, 255, 255, 0.08); border-radius: 50%; filter: blur(80px); }
+.kenya-cta-dots { position: absolute; inset: 0; background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px); background-size: 30px 30px; }
+.kenya-cta-content { position: relative; z-index: 10; text-align: center; }
+.kenya-cta-title { font-size: 2.5rem; font-weight: 900; font-family: var(--font-heading); color: var(--white); margin-bottom: 1.5rem; line-height: 1.15; letter-spacing: -0.02em; }
+.kenya-cta-description { font-size: 1.125rem; color: rgba(255, 255, 255, 0.9); line-height: 1.7; max-width: 800px; margin: 0 auto 2.5rem; }
+.kenya-cta-actions { display: flex; flex-direction: column; gap: 1rem; align-items: center; justify-content: center; margin-bottom: 2.5rem; }
+@media (min-width: 640px) { .kenya-cta-actions { flex-direction: row; } }
+.kenya-cta-button-white { background: var(--white); color: var(--brand-dark); }
+.kenya-cta-button-white:hover { background: rgba(255, 255, 255, 0.95); }
+.kenya-cta-button-outlined { background: transparent; color: var(--white); border: 2px solid rgba(255, 255, 255, 0.3); }
+.kenya-cta-button-outlined:hover { background: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.5); }
+.kenya-cta-checks { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 2rem; }
+.kenya-cta-check { display: flex; align-items: center; gap: 0.75rem; }
+.kenya-cta-check i { font-size: 1.125rem; color: var(--white); }
+.kenya-cta-check span { font-size: 1rem; font-weight: 600; color: rgba(255, 255, 255, 0.9); }

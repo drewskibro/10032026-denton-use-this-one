@@ -1,0 +1,267 @@
+/* ============================================
+   PREMIUM NAVIGATION STYLES
+   Mobile-first, responsive design with glassmorphism
+   ============================================ */
+
+:root {
+  --nav-height: 80px;
+  --brand-purple: #a39ee3;
+  --brand-dark: #6d68b5;
+  --text-dark: #1a202c;
+  --white: #ffffff;
+  --glass-bg: rgba(255, 255, 255, 0.98);
+  --glass-border: rgba(163, 158, 227, 0.15);
+}
+
+/* Fixed Navigation Wrapper - HIGHEST Z-INDEX */
+.nav-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--nav-height);
+  background: rgba(255, 255, 255, 0.85); /* Slightly more transparent for glass effect */
+  border-bottom: 1px solid var(--glass-border);
+  z-index: 9999; /* Highest priority */
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+/* Glass effect via pseudo-element to avoid containing block issues */
+.nav-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: -1;
+}
+
+/* Container */
+.nav-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  z-index: 10002;
+  transition: opacity 0.3s ease;
+}
+
+.nav-logo:hover {
+  opacity: 0.8;
+}
+
+.nav-logo img {
+  height: 45px;
+  width: auto;
+  display: block;
+}
+
+/* Mobile Hamburger Button */
+.nav-mobile-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  z-index: 10002;
+}
+
+.nav-mobile-toggle span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background-color: var(--brand-dark);
+  border-radius: 2px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin: 0 auto;
+}
+
+/* Hamburger Animation */
+.nav-mobile-toggle.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+  background-color: var(--brand-purple);
+}
+
+.nav-mobile-toggle.active span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(-10px);
+}
+
+.nav-mobile-toggle.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+  background-color: var(--brand-purple);
+}
+
+/* Navigation Menu (Mobile Drawer) */
+.nav-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh; /* Fallback */
+  height: 100dvh; /* Dynamic viewport height */
+  width: 100%;
+  max-width: 320px;
+  background: var(--white);
+  padding: 100px 1.5rem 2rem; /* Top padding clears header */
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transform: translateX(100%);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: -10px 0 40px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  z-index: 10001; /* Inside wrapper, but high */
+  border-left: 1px solid var(--glass-border);
+}
+
+.nav-menu.active {
+  transform: translateX(0);
+}
+
+/* Menu Links */
+.nav-menu a:not(.cta-button) {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  text-decoration: none;
+  padding: 1rem;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+/* Icons in Menu */
+.nav-menu a:not(.cta-button) i {
+  font-size: 1.25rem;
+  color: var(--brand-purple);
+  width: 24px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+/* Hover State */
+.nav-menu a:not(.cta-button):hover {
+  background: rgba(163, 158, 227, 0.08);
+  border-color: rgba(163, 158, 227, 0.2);
+  color: var(--brand-dark);
+  transform: translateX(4px);
+}
+
+.nav-menu a:not(.cta-button):hover i {
+  transform: scale(1.1);
+}
+
+/* Highlighted Link (Book Appointment) */
+.nav-menu .nav-menu-highlight {
+  color: var(--brand-dark) !important;
+  background: rgba(163, 158, 227, 0.05);
+}
+
+/* CTA Button in Menu */
+.nav-menu .nav-cta {
+  margin-top: 1.5rem;
+  width: 100%;
+  justify-content: center;
+  padding: 1rem;
+}
+
+/* Overlay Backdrop - LOWER Z-INDEX than Wrapper */
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 9998; /* Below nav-wrapper (9999) */
+}
+
+.nav-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Desktop Styles (1024px+) */
+@media (min-width: 1024px) {
+  .nav-logo img {
+    height: 50px;
+  }
+
+  .nav-mobile-toggle {
+    display: none;
+  }
+
+  .nav-menu {
+    position: static;
+    width: auto;
+    max-width: none;
+    height: auto;
+    background: none;
+    padding: 0;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    transform: none;
+    box-shadow: none;
+    overflow: visible;
+    border-left: none;
+  }
+
+  .nav-menu a:not(.cta-button) {
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    border-radius: 0;
+    border: none;
+    gap: 0.5rem;
+  }
+
+  .nav-menu a:not(.cta-button):hover {
+    background: none;
+    transform: none;
+    color: var(--brand-purple);
+  }
+  
+  /* Hide icons on desktop for cleaner look */
+  .nav-menu a:not(.cta-button) i {
+    display: none; 
+  }
+
+  .nav-menu .nav-cta {
+    margin-top: 0;
+    width: auto;
+    padding: 0.75rem 1.5rem;
+  }
+
+  .nav-overlay {
+    display: none;
+  }
+}
+
+/* Body Padding to prevent content hiding behind fixed nav */
+body {
+  padding-top: var(--nav-height);
+}
