@@ -16,6 +16,24 @@
   background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&h=900&fit=crop');
   background-size: cover;
   background-position: center;
+  /* Pull hero up under fixed nav to eliminate white gap */
+  margin-top: -112px;
+  padding-top: calc(112px + 40px);
+}
+
+/* Adjust for desktop nav heights */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .travel-hero-section {
+    margin-top: -188px;
+    padding-top: calc(188px + 40px);
+  }
+}
+
+@media (min-width: 1280px) {
+  .travel-hero-section {
+    margin-top: -200px;
+    padding-top: calc(200px + 40px);
+  }
 }
 
 .travel-hero-bg {
@@ -1323,39 +1341,6 @@
   filter: blur(80px);
 }
 
-.travel-cta-circle {
-  position: absolute;
-  top: 10%;
-  left: 5%;
-  width: 300px;
-  height: 300px;
-  border: 2px solid rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-}
-
-.travel-cta-square {
-  position: absolute;
-  bottom: 15%;
-  right: 10%;
-  width: 200px;
-  height: 200px;
-  border: 2px solid rgba(255, 255, 255, 0.1);
-  border-radius: 1rem;
-  transform: rotate(15deg);
-  animation: rotate 10s linear infinite;
-}
-
-@keyframes rotate {
-  from { transform: rotate(15deg); }
-  to { transform: rotate(375deg); }
-}
-
-.travel-cta-dots {
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-  background-size: 30px 30px;
-}
 
 .travel-cta-content {
   position: relative;

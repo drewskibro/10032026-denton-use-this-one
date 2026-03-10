@@ -9,11 +9,29 @@
   min-height: 90vh;
   display: flex;
   align-items: center;
-  padding: 140px 0 80px;
+  padding: 40px 0 80px;
   overflow: hidden;
   background-image: url('https://images.unsplash.com/photo-1516426122078-c23e76319801?w=1600&h=900&fit=crop');
   background-size: cover;
   background-position: center;
+  /* Pull hero up under fixed nav to eliminate white gap */
+  margin-top: -112px;
+  padding-top: calc(112px + 40px);
+}
+
+/* Adjust for desktop nav heights */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .kenya-hero-section {
+    margin-top: -188px;
+    padding-top: calc(188px + 40px);
+  }
+}
+
+@media (min-width: 1280px) {
+  .kenya-hero-section {
+    margin-top: -200px;
+    padding-top: calc(200px + 40px);
+  }
 }
 .kenya-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom right, rgba(163, 158, 227, 0.9) 0%, rgba(109, 104, 181, 0.85) 100%); z-index: 1; }
 .kenya-hero-dots { position: absolute; inset: 0; background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px); background-size: 30px 30px; z-index: 2; }

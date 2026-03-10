@@ -20,6 +20,68 @@ You MUST maintain this file to track your work across messages. This is NON-NEGO
 <changelog>
 <!-- NEXT_ENTRY_HERE -->
 
+## 2026-03-10 - Confirmed Yellow Fever Navigation is Correct
+
+- User flagged concern about old menu style on Yellow Fever page
+- Verified yellow-fever.html uses current `denton-nav` system (3-tier: trust bar + logo bar + menu bar)
+- No old navigation files present - cleanup from earlier session was successful
+- All pages across site now use consistent `denton-nav.css` and `denton-nav.js`
+
+
+## 2026-03-10 - Yellow Fever: Updated to New 3-Tier Navigation
+
+- Replaced old single-container nav with new 3-tier structure (trust bar + top bar + bottom nav)
+- Added trust bar with GPhC/NHS/4.9 Google Reviews badges
+- Added logo, phone, NHS Nominate, Book Consultation, and search button to top bar
+- Added proper desktop menu with dropdowns (including Travel destinations grid) and mobile accordion menu
+- Applied negative margin fix to hero section and breadcrumb for seamless nav integration
+- Yellow Fever page now matches homepage navigation system
+
+## 2026-03-10 - Cleaned Up Unused Files
+
+- Removed unused component files: hero-v1.html/css, nav-v1.html/css/js, nav.css/js, mega-menu.js
+- Removed blog files (blog.html/css/js) - no blog functionality in site
+- Deleted 11 files total to streamline project structure
+- Active navigation is `denton-nav` (css/js), all pages now use this system
+
+
+## 2026-03-10 - Travel Health CTA: Removed Decorative Elements
+
+- Removed rotating square (`.travel-cta-square`) that was causing visual distraction
+- Removed circle outline (`.travel-cta-circle`) and dot pattern (`.travel-cta-dots`)
+- Kept subtle glow effects for ambient background
+- Cleaned up CSS by removing unused keyframe animation and element styles
+
+## 2026-03-10 - Cape Verde Page: Updated to New 3-Tier Navigation
+
+- Replaced old single-container nav with new 3-tier structure (trust bar + top bar + bottom nav)
+- Added trust bar with GPhC/NHS/4.9 Google Reviews badges
+- Added logo, phone, NHS Nominate, Book Consultation, and search button to top bar
+- Added proper desktop menu with dropdowns (including Travel destinations grid) and mobile accordion menu
+- CSS already had negative margin-top fix applied from previous batch update
+
+
+## 2026-03-10 - Brazil Page: Updated to New 3-Tier Navigation
+
+- Replaced old single-container nav with new 3-tier structure (trust bar + top bar + bottom nav)
+- Added trust bar with GPhC/NHS/4.9 Google Reviews badges
+- Added logo, phone, NHS Nominate, Book Consultation, and search button to top bar
+- Added proper desktop menu with dropdowns (including Travel destinations grid) and mobile accordion menu
+- CSS already had negative margin-top fix applied from previous batch update
+
+## 2026-03-10 - Fixed White Gap on All Travel Pages
+
+- Applied negative margin-top fix to all 7 travel page hero sections
+- Same fix as book-appointment: `margin-top: -112px` + `padding-top: calc(112px + 40px)`
+- Added responsive media queries for 1024-1279px (-188px) and 1280px+ (-200px)
+- Files updated: travel-health.css, travel-brazil.css, travel-india.css, travel-thailand.css, travel-vietnam.css, travel-kenya.css, travel-cape-verde.css
+- Hero backgrounds now extend seamlessly under the fixed navigation
+
+## 2026-03-10 - Kenya Page: Reduced Hero Padding
+
+- Changed `.kenya-hero-section` padding-top from 140px to 40px in `travel-kenya.css`
+- Matches other travel pages' hero padding pattern for consistent spacing
+
 ## 2026-03-10 - Vietnam Page: Updated to New 3-Tier Navigation
 
 - Replaced old single-container nav with new 3-tier structure (trust bar + top bar + bottom nav)

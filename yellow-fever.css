@@ -10,7 +10,22 @@
   padding: 1rem 0;
   background: var(--white);
   border-bottom: 1px solid rgba(163, 158, 227, 0.1);
-  margin-top: 80px; /* Offset fixed nav */
+  margin-top: -112px;
+  padding-top: calc(112px + 1rem);
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .yellowfever-breadcrumb {
+    margin-top: -188px;
+    padding-top: calc(188px + 1rem);
+  }
+}
+
+@media (min-width: 1280px) {
+  .yellowfever-breadcrumb {
+    margin-top: -200px;
+    padding-top: calc(200px + 1rem);
+  }
 }
 
 .yellowfever-breadcrumb .section-container {
@@ -48,11 +63,27 @@
   min-height: 80vh;
   display: flex;
   align-items: center;
-  padding: 80px 0;
+  padding: 40px 0;
   overflow: hidden;
   background-image: url('https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?w=1600&h=900&fit=crop');
   background-size: cover;
   background-position: center;
+  margin-top: -112px;
+  padding-top: calc(112px + 40px);
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .yellowfever-hero-section {
+    margin-top: -188px;
+    padding-top: calc(188px + 40px);
+  }
+}
+
+@media (min-width: 1280px) {
+  .yellowfever-hero-section {
+    margin-top: -200px;
+    padding-top: calc(200px + 40px);
+  }
 }
 
 .yellowfever-hero-overlay {
