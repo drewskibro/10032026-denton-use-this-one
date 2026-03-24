@@ -1,27 +1,10 @@
 <!DOCTYPE html>
-```
-
-The file got corrupted with **raw boltArtifact tags** embedded in it! This is from a previous failed edit where the artifact markup itself got written into the file instead of being processed.
-
-The file needs to be completely rewritten. Let me read lines 200-587 to get the complete valid content:     I now have the full picture. The file is corrupted at line 588 where `<boltArtifact>` tags got embedded. The valid content ends at line 587 (`</div>` closing the FAQ list).
-
-The file is missing:
-1. Closing `</section>` for the FAQ section
-2. A CTA section
-3. Footer
-4. Closing `</body>` and `</html>` tags
-
-I'll rewrite the entire file with the correct, complete content - no navigation as you requested.   The file is severely corrupted with embedded artifact tags. I'll rewrite it completely with the clean content and no navigation.
-
-<boltArtifact id="fix-book-appointment" title="Fix Corrupted Book Appointment Page">
-<boltAction type="file" filePath="book-appointment.html" operation="write_to_file">
-<!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-title-template="Hair Loss Treatment {location} | {pharmacyName}">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Book Appointment | Denton Pharmacy</title>
-  <meta name="description" content="Book your appointment online for weight loss, travel health, ear wax removal, and more at Denton Pharmacy. Same-day appointments often available." />
+  <title>Hair Loss Treatment Denton | Denton Pharmacy</title>
+  <meta name="description" content="Clinically proven hair loss treatments in Denton. Finasteride, Minoxidil and combination therapy from expert pharmacists. Discreet consultations available." data-template="Clinically proven hair loss treatments in {location}. Finasteride, Minoxidil and combination therapy from {pharmacyName}. Book your discreet consultation today." />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -33,157 +16,82 @@ I'll rewrite the entire file with the correct, complete content - no navigation 
 
   <!-- Styles -->
   <link rel="stylesheet" href="globals.css" />
-  <link rel="stylesheet" href="book-appointment.css" />
-  
-  <script src="book-appointment.js" defer></script>
+  <link rel="stylesheet" href="denton-nav.css" />
+  <link rel="stylesheet" href="hair-loss.css" />
+
+  <script src="site-config.js"></script>
+  <script src="site-loader.js" defer></script>
+  <script src="denton-nav.js" defer></script>
+  <script src="hair-loss.js" defer></script>
 </head>
 <body>
+
+  <nav id="site-nav"></nav>
 
   <!-- ============================================
        HERO SECTION
        ============================================ -->
-  <section class="book-hero-section">
-    <div class="book-hero-gradient"></div>
-    <div class="book-hero-dots"></div>
-    <div class="book-hero-glow-1"></div>
-    <div class="book-hero-glow-2"></div>
+  <section class="hairloss-hero-section">
+    <div class="hairloss-hero-bg"></div>
+    <div class="hairloss-hero-glow-1"></div>
+    <div class="hairloss-hero-glow-2"></div>
 
     <div class="section-container">
-      <div class="book-hero-grid">
-        
+      <div class="hairloss-hero-grid">
+
         <!-- Left: Content -->
-        <div class="book-hero-content">
-          <!-- Premium Badge -->
+        <div class="hairloss-hero-content">
           <div class="section-badge">
             <span class="pulse-dot">
               <span></span>
               <span></span>
             </span>
-            <span class="section-badge-text">ONLINE BOOKING AVAILABLE</span>
+            <span class="section-badge-text">CLINICALLY PROVEN TREATMENTS</span>
           </div>
 
-          <h1 class="book-hero-title">
-            Book Your <br />
-            <span class="gradient-text">Appointment</span>
+          <h1 class="hairloss-hero-title">
+            <span class="gradient-text">Hair Loss Treatment</span> in <span data-site="location">Denton</span>
           </h1>
 
-          <p class="book-hero-description">
-            Choose your service below and find a time that suits you with our expert Denton team. Same-day appointments often available.
+          <p class="hairloss-hero-description">
+            Regain your confidence with clinically proven hair loss treatments. Our expert pharmacists offer discreet consultations and personalised treatment plans at <span data-site="pharmacyName">Denton Pharmacy</span>.
           </p>
-          
-          <div class="book-hero-actions">
-            <button onclick="scrollToBooking()" class="cta-button primary-cta">
-              Book Now
+
+          <ul class="hairloss-hero-features">
+            <li><i class="fas fa-check-circle"></i> Prescription Finasteride tablets</li>
+            <li><i class="fas fa-check-circle"></i> Topical Minoxidil solutions</li>
+            <li><i class="fas fa-check-circle"></i> Combination therapy available</li>
+            <li><i class="fas fa-check-circle"></i> Discreet, confidential consultations</li>
+          </ul>
+
+          <div class="hairloss-hero-actions">
+            <a href="book-appointment.html" class="cta-button primary-cta">
+              Book Consultation
               <i class="fas fa-arrow-right"></i>
-            </button>
+            </a>
             <a href="tel:01613362548" class="cta-button secondary-cta">
               <i class="fas fa-phone"></i>
-              0161 336 2548
+              Call <span data-site="phone">0161 336 2548</span>
             </a>
           </div>
-
-          <!-- Trust Pills -->
-          <div class="book-hero-trust-row">
-            <div class="book-hero-trust-pill">
-              <i class="fas fa-check-circle"></i>
-              <span>Face-to-face Care</span>
-            </div>
-            <div class="book-hero-trust-pill">
-              <i class="fas fa-shield-halved"></i>
-              <span>GPhC Registered</span>
-            </div>
-            <div class="book-hero-trust-pill">
-              <i class="fas fa-bolt"></i>
-              <span>Instant Confirmation</span>
-            </div>
-          </div>
         </div>
 
-        <!-- Right: Visual -->
-        <div class="book-hero-visual">
-          <div class="book-hero-image-card">
-            <div class="book-hero-image-inner">
-              <img src="https://c.animaapp.com/mkl3y6t51Gb5OV/img/uploaded-asset-1769942949376-0.png" alt="Ahmed Al-Liabi - Lead Pharmacist" class="book-hero-image" />
-              <div class="book-hero-overlay"></div>
-            </div>
-            
-            <!-- Floating Testimonial Card -->
-            <div class="book-hero-testimonial-card">
-              <div class="book-hero-quote-icon">
-                <i class="fas fa-quote-left"></i>
+        <!-- Right: Image -->
+        <div class="hairloss-hero-visual">
+          <div class="hairloss-hero-image-card">
+            <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=800&h=1000&fit=crop" alt="Confident man after hair loss treatment consultation" class="hairloss-hero-image" />
+            <div class="hairloss-hero-overlay"></div>
+            <div class="hairloss-hero-caption">
+              <div class="star-row">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
               </div>
-              <p class="book-hero-quote-text">
-                "Booking was so easy and Ahmed was fantastic. I was seen on time and the advice was excellent."
-              </p>
-              <div class="book-hero-quote-footer">
-                <div class="book-hero-author">
-                  <span class="book-hero-name">Sarah J.</span>
-                  <div class="star-row">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                  </div>
-                </div>
-                <div class="book-hero-result-badge">
-                  <span>Verified Patient</span>
-                </div>
-              </div>
+              <p>Trusted by thousands</p>
             </div>
           </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================
-       HOW IT WORKS SECTION
-       ============================================ -->
-  <section class="book-process-section">
-    <div class="section-container">
-      
-      <div class="book-process-header">
-        <h2 class="book-process-title">How It Works</h2>
-      </div>
-
-      <div class="book-process-grid">
-        
-        <!-- Step 1 -->
-        <div class="book-process-card">
-          <div class="book-process-number">1</div>
-          <div class="book-process-icon">
-            <i class="fas fa-hand-pointer"></i>
-          </div>
-          <h3 class="book-process-card-title">Choose Service</h3>
-          <p class="book-process-card-desc">Select the specific health service you need from our comprehensive options below.</p>
-          <div class="book-process-arrow desktop-only">
-            <i class="fas fa-chevron-right"></i>
-          </div>
-        </div>
-
-        <!-- Step 2 -->
-        <div class="book-process-card">
-          <div class="book-process-number">2</div>
-          <div class="book-process-icon">
-            <i class="fas fa-calendar-check"></i>
-          </div>
-          <h3 class="book-process-card-title">Select Time</h3>
-          <p class="book-process-card-desc">Pick a convenient date and time slot that fits your schedule perfectly.</p>
-          <div class="book-process-arrow desktop-only">
-            <i class="fas fa-chevron-right"></i>
-          </div>
-        </div>
-
-        <!-- Step 3 -->
-        <div class="book-process-card">
-          <div class="book-process-number">3</div>
-          <div class="book-process-icon">
-            <i class="fas fa-hospital-user"></i>
-          </div>
-          <h3 class="book-process-card-title">Visit Clinic</h3>
-          <p class="book-process-card-desc">Come to our Denton clinic for your expert consultation with our friendly team.</p>
         </div>
 
       </div>
@@ -193,48 +101,48 @@ I'll rewrite the entire file with the correct, complete content - no navigation 
   <!-- ============================================
        STATS BAR
        ============================================ -->
-  <section class="book-stats-section">
-    <div class="book-stats-shimmer"></div>
+  <section class="hairloss-stats-section">
+    <div class="hairloss-stats-shimmer"></div>
     <div class="section-container">
-      <div class="book-stats-grid">
-        
-        <div class="book-stat-item">
-          <div class="book-stat-icon">
-            <i class="fas fa-clock"></i>
+      <div class="hairloss-stats-grid">
+
+        <div class="hairloss-stat-item">
+          <div class="hairloss-stat-icon">
+            <i class="fas fa-user-doctor"></i>
           </div>
-          <div class="book-stat-content">
-            <span class="book-stat-number">30+</span>
-            <span class="book-stat-label">Years Experience</span>
+          <div class="hairloss-stat-content">
+            <p class="hairloss-stat-number">GPhC</p>
+            <p class="hairloss-stat-label">Registered Pharmacy</p>
           </div>
         </div>
 
-        <div class="book-stat-item">
-          <div class="book-stat-icon">
-            <i class="fas fa-users"></i>
+        <div class="hairloss-stat-item">
+          <div class="hairloss-stat-icon">
+            <i class="fas fa-flask"></i>
           </div>
-          <div class="book-stat-content">
-            <span class="book-stat-number">10,000+</span>
-            <span class="book-stat-label">Patients Helped</span>
-          </div>
-        </div>
-
-        <div class="book-stat-item">
-          <div class="book-stat-icon">
-            <i class="fas fa-certificate"></i>
-          </div>
-          <div class="book-stat-content">
-            <span class="book-stat-number">GPhC</span>
-            <span class="book-stat-label">Registered</span>
+          <div class="hairloss-stat-content">
+            <p class="hairloss-stat-number">90%</p>
+            <p class="hairloss-stat-label">Effective in Clinical Trials</p>
           </div>
         </div>
 
-        <div class="book-stat-item">
-          <div class="book-stat-icon">
-            <i class="fas fa-star"></i>
+        <div class="hairloss-stat-item">
+          <div class="hairloss-stat-icon">
+            <i class="fas fa-lock"></i>
           </div>
-          <div class="book-stat-content">
-            <span class="book-stat-number">4.7</span>
-            <span class="book-stat-label">Average Rating</span>
+          <div class="hairloss-stat-content">
+            <p class="hairloss-stat-number">100%</p>
+            <p class="hairloss-stat-label">Discreet &amp; Confidential</p>
+          </div>
+        </div>
+
+        <div class="hairloss-stat-item">
+          <div class="hairloss-stat-icon">
+            <i class="fas fa-calendar-check"></i>
+          </div>
+          <div class="hairloss-stat-content">
+            <p class="hairloss-stat-number">Same Day</p>
+            <p class="hairloss-stat-label">Consultations Available</p>
           </div>
         </div>
 
@@ -243,156 +151,208 @@ I'll rewrite the entire file with the correct, complete content - no navigation 
   </section>
 
   <!-- ============================================
-       PRIORITY SERVICES SECTION
+       UNDERSTANDING HAIR LOSS
        ============================================ -->
-  <section class="book-services-section">
+  <section class="hairloss-about-section">
     <div class="section-container">
-      
-      <div class="book-services-header">
+
+      <div class="hairloss-about-header">
         <div class="section-badge">
           <span class="pulse-dot">
             <span></span>
             <span></span>
           </span>
-          <span class="section-badge-text">PRIORITY SERVICES</span>
+          <span class="section-badge-text">UNDERSTANDING HAIR LOSS</span>
         </div>
-        <h2 class="book-services-title">Most Popular Services</h2>
-        <div class="book-services-divider"></div>
+        <h2 class="hairloss-about-title">What Causes Hair Loss?</h2>
+        <p class="hairloss-about-desc">Hair loss affects millions of men and women. Understanding the cause is the first step towards effective treatment. Our pharmacists in <span data-site="location">Denton</span> can help identify the right solution for you.</p>
       </div>
 
-      <div class="book-services-grid">
-        
-        <!-- Weight Loss -->
-        <div class="book-service-card-featured">
-          <div class="book-service-image-wrapper">
-            <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&h=400&fit=crop" alt="Weight loss success" class="book-service-image" />
-            <div class="book-service-badge-popular">POPULAR</div>
+      <div class="hairloss-about-grid">
+
+        <div class="hairloss-about-card">
+          <div class="hairloss-about-icon">
+            <i class="fas fa-dna"></i>
           </div>
-          <div class="book-service-content">
-            <div class="book-service-icon-floating">
-              <i class="fas fa-weight-scale"></i>
-            </div>
-            <h3 class="book-service-title">Weight Loss Programme</h3>
-            <p class="book-service-desc">Personalised weight management with GLP-1 treatments and ongoing pharmacist support.</p>
-            <div class="book-service-price-row">
-              <span class="book-service-price">£125</span>
-              <span class="book-service-price-label">/ month starting price</span>
-            </div>
-            <button onclick="scrollToBooking()" class="cta-button primary-cta book-service-btn">
-              Book Consultation
-              <i class="fas fa-arrow-right"></i>
-            </button>
-          </div>
+          <h3 class="hairloss-about-card-title">Male Pattern Baldness</h3>
+          <p class="hairloss-about-card-desc">The most common type of hair loss in men, caused by a genetic sensitivity to DHT (dihydrotestosterone). It typically starts with a receding hairline or thinning at the crown.</p>
         </div>
 
-        <!-- Travel Health -->
-        <div class="book-service-card-featured">
-          <div class="book-service-image-wrapper">
-            <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600&h=400&fit=crop" alt="Travel adventure" class="book-service-image" />
+        <div class="hairloss-about-card">
+          <div class="hairloss-about-icon">
+            <i class="fas fa-person"></i>
           </div>
-          <div class="book-service-content">
-            <div class="book-service-icon-floating">
-              <i class="fas fa-plane-departure"></i>
-            </div>
-            <h3 class="book-service-title">Travel Health Clinic</h3>
-            <p class="book-service-desc">Expert destination advice, vaccinations, and malaria prevention for safe travel.</p>
-            <div class="book-service-price-row">
-              <span class="book-service-price">£10</span>
-              <span class="book-service-price-label">consultation fee</span>
-            </div>
-            <div class="book-service-refund-badge">Refundable with 2+ vaccines</div>
-            <button onclick="scrollToBooking()" class="cta-button primary-cta book-service-btn">
-              Book Consultation
-              <i class="fas fa-arrow-right"></i>
-            </button>
-          </div>
+          <h3 class="hairloss-about-card-title">Hormonal Changes</h3>
+          <p class="hairloss-about-card-desc">Hormonal fluctuations due to pregnancy, menopause, thyroid conditions, or stress can trigger temporary or long-term hair thinning in both men and women.</p>
         </div>
 
-        <!-- Ear Wax Removal -->
-        <div class="book-service-card-featured">
-          <div class="book-service-image-wrapper">
-            <img src="https://images.unsplash.com/photo-1516062423079-7ca13cdc7f5a?w=600&h=400&fit=crop" alt="Happy senior patient" class="book-service-image" />
-            <div class="book-service-badge-popular">POPULAR</div>
+        <div class="hairloss-about-card">
+          <div class="hairloss-about-icon">
+            <i class="fas fa-heart-pulse"></i>
           </div>
-          <div class="book-service-content">
-            <div class="book-service-icon-floating">
-              <i class="fas fa-ear-listen"></i>
-            </div>
-            <h3 class="book-service-title">Ear Wax Removal</h3>
-            <p class="book-service-desc">Professional microsuction ear cleaning by experienced healthcare professionals.</p>
-            <div class="book-service-price-row">
-              <span class="book-service-price">£20</span>
-              <span class="book-service-price-label">/ per ear</span>
-            </div>
-            <button onclick="scrollToBooking()" class="cta-button primary-cta book-service-btn">
-              Book Consultation
-              <i class="fas fa-arrow-right"></i>
-            </button>
-          </div>
+          <h3 class="hairloss-about-card-title">Lifestyle &amp; Nutrition</h3>
+          <p class="hairloss-about-card-desc">Poor diet, stress, lack of sleep, and nutritional deficiencies (particularly iron and vitamin D) can all contribute to hair thinning and loss over time.</p>
         </div>
 
       </div>
+
     </div>
   </section>
 
   <!-- ============================================
-       ADDITIONAL SERVICES SECTION
+       TREATMENT OPTIONS
        ============================================ -->
-  <section class="book-services-additional-section">
+  <section class="hairloss-treatments-section">
     <div class="section-container">
-      
-      <div class="book-services-header">
+
+      <div class="hairloss-treatments-header">
         <div class="section-badge">
-          <span class="section-badge-text">ESSENTIAL HEALTHCARE</span>
+          <span class="pulse-dot">
+            <span></span>
+            <span></span>
+          </span>
+          <span class="section-badge-text">TREATMENT OPTIONS</span>
         </div>
-        <h2 class="book-services-title">Everyday Health Services</h2>
+        <h2 class="hairloss-treatments-title">Clinically Proven Hair Loss Treatments</h2>
       </div>
 
-      <div class="book-services-additional-grid">
-        
-        <!-- Flu Jab -->
-        <div class="book-service-card">
-          <div class="book-service-header-row">
-            <div class="book-service-icon-small">
-              <i class="fas fa-syringe"></i>
-            </div>
-            <div class="book-service-price-badge">£15</div>
+      <div class="hairloss-treatments-grid">
+
+        <!-- Finasteride Card -->
+        <div class="hairloss-treatment-card">
+          <div class="hairloss-treatment-glow"></div>
+          <span class="hairloss-treatment-badge prescription">
+            <i class="fas fa-prescription"></i>&nbsp; Prescription Only
+          </span>
+          <div class="hairloss-treatment-image-container">
+            <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=200&h=200&fit=crop" alt="Finasteride tablets for hair loss" class="hairloss-treatment-img" />
           </div>
-          <h3 class="book-service-title">Flu Vaccination</h3>
-          <p class="book-service-desc">Essential seasonal flu protection for you and your family. Available for both private and NHS patients.</p>
-          <button onclick="scrollToBooking()" class="cta-button secondary-cta book-service-btn-small">
-            Book Flu Jab
-          </button>
+          <h3 class="hairloss-treatment-title">Finasteride</h3>
+          <p class="hairloss-treatment-subtitle">Oral tablet - once daily</p>
+          <div class="hairloss-treatment-divider"></div>
+          <h4 class="hairloss-treatment-heading">How It Works</h4>
+          <p class="hairloss-treatment-text">Finasteride blocks the enzyme that converts testosterone to DHT, the hormone responsible for shrinking hair follicles. Clinical trials show it stops further hair loss in 90% of men.</p>
+          <h4 class="hairloss-treatment-heading">Key Benefits</h4>
+          <ul class="hairloss-treatment-list">
+            <li><i class="fas fa-check-circle"></i> Stops hair loss in 9 out of 10 men</li>
+            <li><i class="fas fa-check-circle"></i> Promotes regrowth in many cases</li>
+            <li><i class="fas fa-check-circle"></i> Simple once-daily tablet</li>
+            <li><i class="fas fa-check-circle"></i> Clinically proven and MHRA approved</li>
+          </ul>
+          <div class="hairloss-treatment-details">
+            <div class="detail">
+              <span class="label">Treatment</span>
+              <span class="value">1mg daily</span>
+            </div>
+            <div class="detail">
+              <span class="label">Results in</span>
+              <span class="value">3-6 months</span>
+            </div>
+          </div>
+          <a href="book-appointment.html" class="cta-button primary-cta hairloss-treatment-btn">
+            Book Consultation <i class="fas fa-arrow-right"></i>
+          </a>
         </div>
 
-        <!-- COVID Booster -->
-        <div class="book-service-card">
-          <div class="book-service-header-row">
-            <div class="book-service-icon-small">
-              <i class="fas fa-shield-virus"></i>
-            </div>
-            <div class="book-service-price-badge">£45</div>
+        <!-- Minoxidil Card -->
+        <div class="hairloss-treatment-card">
+          <div class="hairloss-treatment-glow"></div>
+          <span class="hairloss-treatment-badge otc">
+            <i class="fas fa-basket-shopping"></i>&nbsp; Available Over the Counter
+          </span>
+          <div class="hairloss-treatment-image-container">
+            <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=200&h=200&fit=crop" alt="Minoxidil topical solution for hair loss" class="hairloss-treatment-img" />
           </div>
-          <h3 class="book-service-title">COVID Booster</h3>
-          <p class="book-service-desc">Private COVID-19 booster vaccinations for ongoing protection. No NHS eligibility required.</p>
-          <button onclick="scrollToBooking()" class="cta-button secondary-cta book-service-btn-small">
-            Book Booster
-          </button>
+          <h3 class="hairloss-treatment-title">Minoxidil</h3>
+          <p class="hairloss-treatment-subtitle">Topical solution - applied twice daily</p>
+          <div class="hairloss-treatment-divider"></div>
+          <h4 class="hairloss-treatment-heading">How It Works</h4>
+          <p class="hairloss-treatment-text">Minoxidil is a topical treatment that stimulates blood flow to hair follicles, extending the growth phase and promoting thicker, stronger hair. Suitable for both men and women.</p>
+          <h4 class="hairloss-treatment-heading">Key Benefits</h4>
+          <ul class="hairloss-treatment-list">
+            <li><i class="fas fa-check-circle"></i> Stimulates new hair growth</li>
+            <li><i class="fas fa-check-circle"></i> Suitable for men and women</li>
+            <li><i class="fas fa-check-circle"></i> No prescription required</li>
+            <li><i class="fas fa-check-circle"></i> Available in foam or solution</li>
+          </ul>
+          <div class="hairloss-treatment-details">
+            <div class="detail">
+              <span class="label">Application</span>
+              <span class="value">Twice daily</span>
+            </div>
+            <div class="detail">
+              <span class="label">Results in</span>
+              <span class="value">2-4 months</span>
+            </div>
+          </div>
+          <a href="book-appointment.html" class="cta-button primary-cta hairloss-treatment-btn">
+            Get Expert Advice <i class="fas fa-arrow-right"></i>
+          </a>
         </div>
 
-        <!-- Private Services -->
-        <div class="book-service-card">
-          <div class="book-service-header-row">
-            <div class="book-service-icon-small">
-              <i class="fas fa-notes-medical"></i>
-            </div>
-            <div class="book-service-price-badge">VARIES</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================
+       COMBINATION THERAPY
+       ============================================ -->
+  <section class="hairloss-combo-section">
+    <div class="section-container">
+      <div class="hairloss-combo-grid">
+
+        <!-- Left: Image -->
+        <div class="hairloss-combo-image-card">
+          <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&h=1000&fit=crop" alt="Pharmacist consultation for hair loss treatment" class="hairloss-combo-image" />
+        </div>
+
+        <!-- Right: Content -->
+        <div class="hairloss-combo-content">
+          <div class="section-badge">
+            <span class="pulse-dot">
+              <span></span>
+              <span></span>
+            </span>
+            <span class="section-badge-text">MAXIMUM RESULTS</span>
           </div>
-          <h3 class="book-service-title">Private Services</h3>
-          <p class="book-service-desc">Chickenpox, shingles, Hepatitis B, B12 injections, and general health consultations.</p>
-          <button onclick="scrollToBooking()" class="cta-button secondary-cta book-service-btn-small">
-            Book Service
-          </button>
+
+          <h2 class="hairloss-combo-title">Combination Therapy</h2>
+          <p class="hairloss-combo-desc">For the best possible results, our pharmacists may recommend combining Finasteride and Minoxidil. This dual approach tackles hair loss from two different angles for maximum effectiveness.</p>
+
+          <ul class="hairloss-combo-benefits">
+            <li>
+              <div class="icon"><i class="fas fa-shield-halved"></i></div>
+              <div class="text">
+                <strong>Blocks DHT Internally</strong>
+                <p>Finasteride prevents the hormone that causes follicle shrinkage from the inside</p>
+              </div>
+            </li>
+            <li>
+              <div class="icon"><i class="fas fa-arrows-rotate"></i></div>
+              <div class="text">
+                <strong>Stimulates Growth Externally</strong>
+                <p>Minoxidil boosts blood flow to follicles, encouraging thicker, stronger hair</p>
+              </div>
+            </li>
+            <li>
+              <div class="icon"><i class="fas fa-chart-line"></i></div>
+              <div class="text">
+                <strong>Superior Results</strong>
+                <p>Clinical studies show combination therapy outperforms either treatment alone</p>
+              </div>
+            </li>
+          </ul>
+
+          <div class="hairloss-combo-comparison">
+            <p class="single"><i class="fas fa-arrow-right"></i> Finasteride alone: stops loss in ~90% of men</p>
+            <p class="single"><i class="fas fa-arrow-right"></i> Minoxidil alone: visible regrowth in ~60% of users</p>
+            <p class="combined"><i class="fas fa-star"></i> Combined: significantly better regrowth and retention</p>
+          </div>
+
+          <a href="book-appointment.html" class="cta-button primary-cta">
+            Discuss Combination Therapy <i class="fas fa-arrow-right"></i>
+          </a>
         </div>
 
       </div>
@@ -400,236 +360,254 @@ I'll rewrite the entire file with the correct, complete content - no navigation 
   </section>
 
   <!-- ============================================
-       AMELIA BOOKING SECTION
+       ELIGIBILITY SECTION
        ============================================ -->
-  <section class="book-amelia-section" id="booking-widget">
-    <div class="book-amelia-blob-1"></div>
-    <div class="book-amelia-blob-2"></div>
-    
+  <section class="hairloss-eligibility-section">
     <div class="section-container">
-      <div class="book-amelia-header">
-        <h2 class="book-amelia-title">Select Your Appointment Time</h2>
-        <p class="book-amelia-description">Choose a convenient time with our Denton healthcare team</p>
-      </div>
 
-      <div class="book-amelia-container">
-        <!-- Placeholder for Amelia Widget -->
-        <div class="book-amelia-placeholder">
-          <i class="fas fa-calendar-alt"></i>
-          <h3>Amelia Booking Widget Loads Here</h3>
-          <p>The Amelia shortcode will be inserted in this container during WordPress integration.</p>
+      <div class="hairloss-eligibility-header">
+        <div class="section-badge">
+          <span class="pulse-dot">
+            <span></span>
+            <span></span>
+          </span>
+          <span class="section-badge-text">AM I ELIGIBLE?</span>
         </div>
+        <h2 class="hairloss-eligibility-title">Who Can Access Hair Loss Treatment?</h2>
       </div>
 
-      <div class="book-amelia-footer">
-        <p>Can't find a suitable time? Call us on <a href="tel:01613362548">0161 336 2548</a></p>
+      <div class="hairloss-eligibility-grid">
+
+        <div class="hairloss-eligibility-card">
+          <div class="icon"><i class="fas fa-male"></i></div>
+          <span class="badge suitable">SUITABLE</span>
+          <h3>Men (18-65)</h3>
+          <ul class="check-list">
+            <li><i class="fas fa-check"></i> Male pattern baldness</li>
+            <li><i class="fas fa-check"></i> Receding hairline</li>
+            <li><i class="fas fa-check"></i> Thinning at the crown</li>
+            <li><i class="fas fa-check"></i> Early-stage hair loss</li>
+          </ul>
+        </div>
+
+        <div class="hairloss-eligibility-card">
+          <div class="icon"><i class="fas fa-female"></i></div>
+          <span class="badge assessment">ASSESSMENT NEEDED</span>
+          <h3>Women</h3>
+          <ul class="check-list">
+            <li><i class="fas fa-check"></i> Female pattern thinning</li>
+            <li><i class="fas fa-check"></i> Post-menopausal hair loss</li>
+            <li><i class="fas fa-check"></i> Minoxidil may be suitable</li>
+            <li><i class="fas fa-check"></i> Consultation recommended</li>
+          </ul>
+        </div>
+
+        <div class="hairloss-eligibility-card">
+          <div class="icon"><i class="fas fa-circle-exclamation"></i></div>
+          <span class="badge not-suitable">NOT SUITABLE</span>
+          <h3>Exclusions</h3>
+          <ul class="check-list">
+            <li><i class="fas fa-times"></i> Under 18 years of age</li>
+            <li><i class="fas fa-times"></i> Pregnant or breastfeeding</li>
+            <li><i class="fas fa-times"></i> Alopecia areata (autoimmune)</li>
+            <li><i class="fas fa-times"></i> Hair loss from medication</li>
+          </ul>
+        </div>
+
       </div>
+
+      <p class="hairloss-eligibility-note">
+        Not sure if treatment is right for you? Our pharmacists at <span data-site="pharmacyName">Denton Pharmacy</span> will assess your suitability during a free, confidential consultation.
+      </p>
+
     </div>
   </section>
 
   <!-- ============================================
-       TESTIMONIALS SECTION
+       PROCESS SECTION
        ============================================ -->
-  <section class="book-testimonials-section">
+  <section class="hairloss-process-section">
     <div class="section-container">
-      
-      <div class="book-testimonials-header">
-        <h2 class="book-testimonials-title">What Our Patients Say</h2>
-        <div class="book-testimonials-divider"></div>
+
+      <div class="hairloss-process-header">
+        <div class="section-badge">
+          <span class="pulse-dot">
+            <span></span>
+            <span></span>
+          </span>
+          <span class="section-badge-text">HOW IT WORKS</span>
+        </div>
+        <h2 class="hairloss-process-title">Your Hair Loss Treatment Journey</h2>
       </div>
 
-      <div class="book-testimonials-grid">
-        
-        <!-- Testimonial 1 -->
-        <div class="book-testimonial-card">
-          <div class="star-row">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-          </div>
-          <p class="book-testimonial-quote">"Very efficient service. I phoned the evening before in a panic thinking we were too late for our holiday vaccinations. We got an appointment for the following day... Excellent advice given. Would highly recommend."</p>
-          <div class="book-testimonial-author">
-            <div class="book-testimonial-avatar">
-              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop" alt="Kathryn H." />
-            </div>
-            <div class="book-testimonial-info">
-              <span class="book-testimonial-name">Kathryn H.</span>
-              <span class="book-testimonial-service">Travel Health Patient</span>
-            </div>
-          </div>
+      <div class="hairloss-process-grid">
+
+        <!-- Step 1 -->
+        <div class="hairloss-process-card">
+          <div class="number">1</div>
+          <div class="icon"><i class="fas fa-clipboard-check"></i></div>
+          <h3>Free Consultation</h3>
+          <p>Book a discreet, confidential consultation with our pharmacist. We'll assess your hair loss, discuss your medical history, and recommend the best treatment.</p>
+          <span class="time-badge">15 minutes</span>
+          <div class="arrow"><i class="fas fa-chevron-right"></i></div>
         </div>
 
-        <!-- Testimonial 2 -->
-        <div class="book-testimonial-card">
-          <div class="star-row">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-          </div>
-          <p class="book-testimonial-quote">"I travel 40 miles every month to see the team for my weight loss consultations – they're that good. Would never go anywhere else. The support has been incredible."</p>
-          <div class="book-testimonial-author">
-            <div class="book-testimonial-avatar">
-              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop" alt="Sarah M." />
-            </div>
-            <div class="book-testimonial-info">
-              <span class="book-testimonial-name">Sarah M.</span>
-              <span class="book-testimonial-service">Weight Loss Patient</span>
-            </div>
-          </div>
+        <!-- Step 2 -->
+        <div class="hairloss-process-card">
+          <div class="number">2</div>
+          <div class="icon"><i class="fas fa-prescription-bottle-medical"></i></div>
+          <h3>Personalised Plan</h3>
+          <p>Based on your assessment, we'll create a tailored treatment plan. This may include Finasteride, Minoxidil, or a combination of both.</p>
+          <span class="time-badge">Same day</span>
+          <div class="arrow"><i class="fas fa-chevron-right"></i></div>
         </div>
 
-        <!-- Testimonial 3 -->
-        <div class="book-testimonial-card">
-          <div class="star-row">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-          </div>
-          <p class="book-testimonial-quote">"The staff were just amazing... professional, courteous and helpful... If I could give them more than five stars I would... they truly take customer service to a whole new level."</p>
-          <div class="book-testimonial-author">
-            <div class="book-testimonial-avatar">
-              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop" alt="Tom W." />
-            </div>
-            <div class="book-testimonial-info">
-              <span class="book-testimonial-name">Tom W.</span>
-              <span class="book-testimonial-service">Pharmacy Patient</span>
-            </div>
-          </div>
+        <!-- Step 3 -->
+        <div class="hairloss-process-card">
+          <div class="number">3</div>
+          <div class="icon"><i class="fas fa-pills"></i></div>
+          <h3>Start Treatment</h3>
+          <p>Collect your medication from <span data-site="pharmacyName">Denton Pharmacy</span> and begin treatment right away. We'll explain exactly how to use your medication.</p>
+          <span class="time-badge">Immediate</span>
+          <div class="arrow"><i class="fas fa-chevron-right"></i></div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="hairloss-process-card">
+          <div class="number">4</div>
+          <div class="icon"><i class="fas fa-chart-line"></i></div>
+          <h3>Ongoing Support</h3>
+          <p>Regular check-ins to monitor your progress, adjust treatment if needed, and ensure you're getting the best possible results from your plan.</p>
+          <span class="time-badge">Ongoing</span>
         </div>
 
       </div>
+
+      <div class="hairloss-process-cta">
+        <a href="book-appointment.html" class="cta-button primary-cta">
+          Start Your Journey Today <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
     </div>
   </section>
 
   <!-- ============================================
        FAQ SECTION
        ============================================ -->
-  <section class="book-faq-section">
+  <section class="hairloss-faq-section">
     <div class="section-container">
-      
-      <div class="book-faq-header">
+
+      <div class="hairloss-faq-header">
         <div class="section-badge">
-          <span class="section-badge-text">EVERYTHING YOU NEED TO KNOW</span>
+          <span class="pulse-dot">
+            <span></span>
+            <span></span>
+          </span>
+          <span class="section-badge-text">FREQUENTLY ASKED QUESTIONS</span>
         </div>
-        <h2 class="book-faq-title">Common Questions</h2>
-        <p class="book-faq-description">Clear answers about our services, location, and team to help you book with confidence.</p>
+        <h2 class="hairloss-faq-title">Hair Loss Treatment FAQs</h2>
       </div>
 
-      <div class="book-faq-list">
-        
-        <div class="book-faq-item">
-          <button class="book-faq-btn" onclick="toggleFAQ(this)">
-            <div class="book-faq-left">
-              <span class="book-faq-number">01</span>
-              <span class="book-faq-question">Is there free parking at your Denton clinic?</span>
-            </div>
-            <div class="book-faq-icon">
-              <i class="fas fa-plus"></i>
-            </div>
+      <div class="hairloss-faq-list">
+
+        <div class="hairloss-faq-item">
+          <button class="hairloss-faq-btn" onclick="toggleFAQ(this)">
+            <span class="num">1</span>
+            <span class="text">How effective is Finasteride for hair loss?</span>
+            <span class="icon"><i class="fas fa-plus"></i></span>
           </button>
-          <div class="book-faq-answer">
-            <p>Yes, absolutely. We have free parking available directly outside our clinic. Our location is easily accessible from all parts of Denton and Manchester, making your visit stress-free and convenient.</p>
+          <div class="hairloss-faq-content">
+            <p>Clinical studies show that Finasteride stops further hair loss in approximately 90% of men and promotes visible regrowth in around two-thirds of users. Results typically become noticeable after 3-6 months of consistent use.</p>
           </div>
         </div>
 
-        <div class="book-faq-item">
-          <button class="book-faq-btn" onclick="toggleFAQ(this)">
-            <div class="book-faq-left">
-              <span class="book-faq-number">02</span>
-              <span class="book-faq-question">How quickly can I start the weight loss programme?</span>
-            </div>
-            <div class="book-faq-icon">
-              <i class="fas fa-plus"></i>
-            </div>
+        <div class="hairloss-faq-item">
+          <button class="hairloss-faq-btn" onclick="toggleFAQ(this)">
+            <span class="num">2</span>
+            <span class="text">Are there any side effects?</span>
+            <span class="icon"><i class="fas fa-plus"></i></span>
           </button>
-          <div class="book-faq-answer">
-            <p>You can often start the same day as your consultation. Because we have our own prescriber, we don't have waiting lists. If the treatment is suitable for you, we can issue your prescription and medication immediately during your appointment.</p>
+          <div class="hairloss-faq-content">
+            <p>Both Finasteride and Minoxidil are well-tolerated by most people. Finasteride may cause mild side effects in a small percentage of men, which typically resolve on stopping treatment. Our pharmacist will discuss all potential side effects during your consultation.</p>
           </div>
         </div>
 
-        <div class="book-faq-item">
-          <button class="book-faq-btn" onclick="toggleFAQ(this)">
-            <div class="book-faq-left">
-              <span class="book-faq-number">03</span>
-              <span class="book-faq-question">Who will I be seeing for my consultation?</span>
-            </div>
-            <div class="book-faq-icon">
-              <i class="fas fa-plus"></i>
-            </div>
+        <div class="hairloss-faq-item">
+          <button class="hairloss-faq-btn" onclick="toggleFAQ(this)">
+            <span class="num">3</span>
+            <span class="text">Can women use these treatments?</span>
+            <span class="icon"><i class="fas fa-plus"></i></span>
           </button>
-          <div class="book-faq-answer">
-            <p>You will see Ahmed Al-Liabi or one of our expert clinical team members. Ahmed is a GPhC Registered Pharmacist with over 30 years of experience serving the Denton community. You'll see the same friendly face for your follow-ups, ensuring continuity of care.</p>
+          <div class="hairloss-faq-content">
+            <p>Minoxidil is suitable for women experiencing hair thinning. However, Finasteride is only licensed for use in men. Our pharmacists can assess your individual situation and recommend the most appropriate treatment during a consultation.</p>
           </div>
         </div>
 
-        <div class="book-faq-item">
-          <button class="book-faq-btn" onclick="toggleFAQ(this)">
-            <div class="book-faq-left">
-              <span class="book-faq-number">04</span>
-              <span class="book-faq-question">Do I need to book travel vaccinations in advance?</span>
-            </div>
-            <div class="book-faq-icon">
-              <i class="fas fa-plus"></i>
-            </div>
+        <div class="hairloss-faq-item">
+          <button class="hairloss-faq-btn" onclick="toggleFAQ(this)">
+            <span class="num">4</span>
+            <span class="text">How long before I see results?</span>
+            <span class="icon"><i class="fas fa-plus"></i></span>
           </button>
-          <div class="book-faq-answer">
-            <p>Ideally, yes. We recommend booking 6-8 weeks before you travel to allow time for any vaccine courses to be completed. However, we can often accommodate last-minute appointments for urgent travel needs. We hold most vaccines in stock, including Yellow Fever.</p>
+          <div class="hairloss-faq-content">
+            <p>Most patients begin to notice reduced hair loss within 3 months and visible regrowth between 6-12 months. Minoxidil may show initial results slightly sooner. Consistency is key - these treatments work best with daily, long-term use.</p>
           </div>
         </div>
 
-        <div class="book-faq-item">
-          <button class="book-faq-btn" onclick="toggleFAQ(this)">
-            <div class="book-faq-left">
-              <span class="book-faq-number">05</span>
-              <span class="book-faq-question">Why do so many Denton patients choose you?</span>
-            </div>
-            <div class="book-faq-icon">
-              <i class="fas fa-plus"></i>
-            </div>
+        <div class="hairloss-faq-item">
+          <button class="hairloss-faq-btn" onclick="toggleFAQ(this)">
+            <span class="num">5</span>
+            <span class="text">Do I need a prescription?</span>
+            <span class="icon"><i class="fas fa-plus"></i></span>
           </button>
-          <div class="book-faq-answer">
-            <p>We combine clinical expertise with genuine warmth. Plus, we're a local independent pharmacy that has been part of the Denton community for decades—we truly care about your health outcomes. Our patients appreciate the personal care you can't get from large chains.</p>
+          <div class="hairloss-faq-content">
+            <p>Finasteride requires a prescription, which our pharmacists can issue following a consultation. Minoxidil is available over the counter without a prescription. Either way, we recommend a consultation so we can advise the best treatment for your needs.</p>
           </div>
         </div>
 
-        <div class="book-faq-item">
-          <button class="book-faq-btn" onclick="toggleFAQ(this)">
-            <div class="book-faq-left">
-              <span class="book-faq-number">06</span>
-              <span class="book-faq-question">Do I need a referral from my GP?</span>
-            </div>
-            <div class="book-faq-icon">
-              <i class="fas fa-plus"></i>
-            </div>
+        <div class="hairloss-faq-item">
+          <button class="hairloss-faq-btn" onclick="toggleFAQ(this)">
+            <span class="num">6</span>
+            <span class="text">What happens if I stop treatment?</span>
+            <span class="icon"><i class="fas fa-plus"></i></span>
           </button>
-          <div class="book-faq-answer">
-            <p>No referral is needed. You can book directly with us for any of our services, including weight loss, travel vaccinations, and ear wax removal. We handle all the clinical assessments in-house during your consultation.</p>
+          <div class="hairloss-faq-content">
+            <p>Hair loss treatments need to be continued to maintain results. If you stop taking Finasteride or applying Minoxidil, hair loss will gradually resume over the following months. Our team will support you with an ongoing treatment plan.</p>
           </div>
         </div>
 
       </div>
+
     </div>
   </section>
 
   <!-- ============================================
        FINAL CTA SECTION
        ============================================ -->
-  <section class="book-cta-section">
-    <div class="book-cta-bg-dots"></div>
-    <div class="book-cta-bg-blobs"></div>
-    
+  <section class="hairloss-cta-section">
     <div class="section-container">
-      <div class="book-cta-content">
-        <h2 class="book-cta-title">Ready to Book?</h2>
-        <p class="book-cta-description">Our friendly Denton team is here to help with all your healthcare needs.</p>
-        
-        <div class="book-cta-buttons">
-          <a href="tel:01613362548" class="cta-button primary-cta book-cta-phone">
-            <i class="fas fa-phone"></i>
-            0161 336 2548
+      <div class="hairloss-cta-content">
+
+        <h2 class="hairloss-cta-title">Ready to Take Control of Hair Loss?</h2>
+        <p class="hairloss-cta-desc">
+          Book a free, confidential consultation at <span data-site="pharmacyName">Denton Pharmacy</span> in <span data-site="location">Denton</span>. Our expert pharmacists will help you find the right treatment to restore your confidence.
+        </p>
+
+        <div class="hairloss-cta-actions">
+          <a href="book-appointment.html" class="hairloss-cta-btn">
+            Book Free Consultation <i class="fas fa-arrow-right"></i>
           </a>
-          <div class="book-cta-hours">
-            <i class="fas fa-clock"></i>
-            <span>Mon-Fri 9am-6pm, Sat 9am-1pm</span>
-          </div>
+          <a href="tel:01613362548" class="hairloss-cta-badge">
+            <i class="fas fa-phone"></i>&nbsp; Call <span data-site="phone">0161 336 2548</span>
+          </a>
         </div>
+
       </div>
     </div>
   </section>
+
+  <footer id="site-footer"></footer>
 
 </body>
 </html>
